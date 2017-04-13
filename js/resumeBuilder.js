@@ -10,7 +10,8 @@ var bio = {
         "email": "sfhildeb@gmail.com",
         "linkedin": "https://www.linkedin.com/in/stephen-f-hildebrand/",
         "github": "@shiild",
-        "location": "2712 Meridian Drive #6, Greenville, NC 27834"
+        "twitter": "",
+        "location": "Durham, North Carolina"
     },
     "welcomeMsg": "Bright, driven student with academic experience \
     in computer programming and a passion for coding.",
@@ -18,7 +19,7 @@ var bio = {
         "Java",
         "JavaScript",
         "C/C++",
-        "HTML",
+        "HTML/XML",
         "CSS",
         "Assembly Language"
     ],
@@ -64,8 +65,8 @@ var work = {
             "title": "Customer Service",
             "location": "Cary, North Carolina",
             "dates": "May, 2011 - July, 2013",
-            "description": "Assisted customers in selection, purchase and return of products. \
-            Worked with customers to determine the ideal product that meets their needs."
+            "description": "Assisted customers in selection, purchase and return of products.\n \
+            Worked with customers to determine the ideal product that meets their needs.\n"
         },
         {
             "employer": "La Pizza Volante",
@@ -122,26 +123,7 @@ if(bio.skills.length > 0) {
         $("#skills").append(HTMLskills.replace(data, bio.skills[i]));
     }
 }
-// (1) Write a for-in loop that iterates over all jobs in your work object and
-// .append()s a new HTMLworkStart element for each one, (2) formats each
-// job's employer with HTMLworkEmployer and each job title with HTMLworkTitle,
-// and (3) .append()s a concatenation of employer and title each to the
-// element with class work-entry last.
-function displayWork() {
-    if(work.jobs.length > 0) {
-        for (j in work.jobs) {
-            $("#workExperience").append(HTMLworkStart);
-            var formattedEmployer = HTMLworkEmployer.replace(data, work.jobs[j].employer);
-            var formattedTitle = HTMLworkTitle.replace(data, work.jobs[j].title);
-            var formattedDates = HTMLworkDates.replace(data, work.jobs[j].dates);
-            var formattedDesc = HTMLworkDescription.replace(data, work.jobs[j].description);
-            $(".work-entry:last").append(formattedEmployer + " " + formattedTitle);
-            $(".work-entry:last").append(formattedDates);
-            $(".work-entry:last").append(formattedDesc);
-        }
-    }
-}
-displayWork();
+
 /*
  $(document).click() is a jQuery event handler on the page, which is a
  fancy way of saying that it will hold some code that runs every time a
@@ -167,6 +149,26 @@ function inName(name) {
     return first + " " + last;
 }
 // inName("sebastian thrun") === "Sebastian THRUN";
+
+function displayEducation() {
+    if(education.schools.length > 0) {
+        for (sch in education.schools) {
+            $("#education").append(HTMLschoolStart);
+            var formattedName = HTMLschoolName.replace(data, education.schools[sch].name);
+            var formattedDegree = HTMLschoolDegree.replace(data, education.schools[sch].degree);
+            var formattedDates = HTMLschoolDates.replace(data, education.schools[sch].dates);
+            var formattedLocation = HTMLschoolLocation.replace(data, education.schools[sch].location);
+            var formattedMajor = HTMLschoolMajor.replace(data, education.schools[sch].major);
+
+            $(".education-entry").append(formattedName + formattedDegree);
+            $(".education-entry").append(formattedDates);
+            $(".education-entry").append(formattedLocation);
+            $(".education-entry").append(formattedMajor);
+
+        }
+    }
+}
+displayEducation();
 
 /*
  1) Encapsulate display() within the projects object.
@@ -199,25 +201,26 @@ function displayProjects() {
 }
 displayProjects();
 
-function displayEducation() {
-    if(education.schools.length > 0) {
-        for (sch in education.schools) {
-            $("#education").append(HTMLschoolStart);
-            var formattedName = HTMLschoolName.replace(data, education.schools[sch].name);
-            var formattedDegree = HTMLschoolDegree.replace(data, education.schools[sch].degree);
-            var formattedDates = HTMLschoolDates.replace(data, education.schools[sch].dates);
-            var formattedLocation = HTMLschoolLocation.replace(data, education.schools[sch].location);
-            var formattedMajor = HTMLschoolMajor.replace(data, education.schools[sch].major);
-
-            $(".education-entry").append(formattedName + formattedDegree);
-            $(".education-entry").append(formattedDates);
-            $(".education-entry").append(formattedLocation);
-            $(".education-entry").append(formattedMajor);
-
+// (1) Write a for-in loop that iterates over all jobs in your work object and
+// .append()s a new HTMLworkStart element for each one, (2) formats each
+// job's employer with HTMLworkEmployer and each job title with HTMLworkTitle,
+// and (3) .append()s a concatenation of employer and title each to the
+// element with class work-entry last.
+function displayWork() {
+    if(work.jobs.length > 0) {
+        for (j in work.jobs) {
+            $("#workExperience").append(HTMLworkStart);
+            var formattedEmployer = HTMLworkEmployer.replace(data, work.jobs[j].employer);
+            var formattedTitle = HTMLworkTitle.replace(data, work.jobs[j].title);
+            var formattedDates = HTMLworkDates.replace(data, work.jobs[j].dates);
+            var formattedDesc = HTMLworkDescription.replace(data, work.jobs[j].description);
+            $(".work-entry:last").append(formattedEmployer + " " + formattedTitle);
+            $(".work-entry:last").append(formattedDates);
+            $(".work-entry:last").append(formattedDesc);
         }
     }
 }
-displayEducation();
+displayWork();
 
 // $("#main").prepend(HTMLwelcomeMsg.replace(data, bio.welcomeMsg));
 $("#main").prepend(HTMLbioPic.replace(data, bio.bioPic));
