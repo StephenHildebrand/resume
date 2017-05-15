@@ -3,50 +3,64 @@ var data = "%data%";
 var contact = "%contact%";
 
 var bio = {
-    "name": "Stephen Hildebrand",
-    "role": "Computer Programmer",
+    "name": "Stephen F Hildebrand",
+    "role": "Software Developer",
+    "status": "For hire",
     "contact": {
         "mobile": "(919) 891-0611",
         "email": "sfhildeb@gmail.com",
         "linkedin": "https://www.linkedin.com/in/stephen-f-hildebrand/",
-        "github": "@shiild",
-        "twitter": "",
+        "github": "StephenHildebrand",
         "location": "Durham, North Carolina"
     },
     "welcomeMsg": "Bright, driven student with academic experience \
     in computer programming and a passion for coding.",
     "skills": [
-        "Java",
-        "JavaScript",
-        "C/C++",
-        "HTML/XML",
-        "CSS",
-        "Assembly Language"
+        "Java", // (2 years)
+        "C", // (2 years)
+        "Assembly", // (2 years)
+        "C++", // (1 year)
+        "JavaScript", // (<1 year)
+        "HTML/XML", // (<1 year)
+        "CSS" // (<1 year)
     ],
     "bioPic": "images/formal.jpg"
 }
 
 var education = {
     "schools": [
-        {
-            "name": "North Carolina State University",
-            "location": "Raleigh, North Carolina",
-            "degree": "Bachelor of Science, Bachelor of Arts",
-            "majors": [
-                "Biological Sciences",
-                "Spanish Language & Literature"
-            ],
-            "dates": 2013,
-            "url": "https://www.ncsu.edu"
-        },
-        {
-            "name": "North Carolina State University",
-            "location": "Raleigh, North Carolina",
-            "degree": "Certificate",
-            "majors": ["Computer Programming"],
-            "dates": 2016,
-            "url": "https://www.ncsu.edu"
-        }
+      {
+          "name": "North Carolina State University",
+          "location": "Raleigh, North Carolina",
+          "degree": "Certificate",
+          "major": "Computer Programming",
+          "dates": "May, 2015 - December, 2016",
+          "url": "https://www.ncsu.edu"
+      },
+      {
+          "name": "Southern College of Optometry",
+          "location": "Memphis, Tennessee",
+          "degree": "Doctorate (incomplete)",
+          "major": "Optometry",
+          "dates": "August, 2013 - April, 2015",
+          "url": "https://www.sco.edu"
+      },
+      {
+          "name": "North Carolina State University",
+          "location": "Raleigh, North Carolina",
+          "degree": "Bachelor of Science",
+          "major": "Biological Sciences",
+          "dates": "August, 2008 - May, 2013",
+          "url": "https://www.ncsu.edu"
+      },
+      {
+          "name": "North Carolina State University",
+          "location": "Raleigh, North Carolina",
+          "degree": "Bachelor of Arts",
+          "major": "Spanish Language & Literature",
+          "dates": "August, 2008 - May,  2013",
+          "url": "https://www.ncsu.edu"
+      }
     ],
     "onlineCourses": [
         {
@@ -62,19 +76,21 @@ var work = {
     "jobs": [
         {
             "employer": "Recreational Equipment Inc.",
-            "title": "Customer Service",
+            "title": "Customer Service (Frontline)",
             "location": "Cary, North Carolina",
             "dates": "May, 2011 - July, 2013",
-            "description": "Assisted customers in selection, purchase and return of products.\n \
-            Worked with customers to determine the ideal product that meets their needs.\n"
+            "description": "Helped customer choose product that fits their needs. \
+            Resolved customer issues. Assisted customers with purchases, exchanges, \
+            repairs and/or refunds.\n"
         },
         {
             "employer": "La Pizza Volante",
             "title": "Assistant Manager",
             "location": "Cary, North Carolina",
             "dates": "April, 2008 - August, 2009",
-            "description": "Prepared, served and delivered food. Purchased supplies from \
-            local supplier. Planned and performed business promotion and advertising."
+            "description": "Directed restaurant operations. Helped owner with hiring of \
+            staff. Managed purchase of supplies from local farmers. Planned and executed \
+            business promotion and advertising. Prepared, served and delivered food.\n"
         }
     ],
     display: displayWork
@@ -85,21 +101,21 @@ var work = {
 var projects = {
     "projects": [
         {
-            "title": "Movie Rental Manager",
+            "title": "Flix Movie Rental Manager",
             "dates": "2016",
-            "description": "Description for Project number one.",
+            "description": "Description for Flix Movie Rental Manager.",
             "images": [
-                "images/image1.jpg",
-                "images/image2.jpg"
+                "images/placeholder.png",
+                "images/placeholder.png"
             ]
         },
         {
             title: "Divi Notes/Tasks for Android",
             dates: "2017",
-            description: "Description for Project number two.",
+            description: "Description for Divi Notes/Tasks for Android.",
             images: [
-                "images/imageA.jpg",
-                "images/imageB.jpg"
+                "images/placeholder.png",
+                "images/placeholder.png"
             ]
         }
     ],
@@ -107,7 +123,6 @@ var projects = {
 }
 
 // $("#main").prepend(HTMLgithub.replace(data, bio.contact.github));
-// $("#main").prepend(HTMLtwitter.replace(data, bio.contact.twitter));
 // $("#main").prepend(HTMLlocation.replace(data, bio.contact.location));
 // $("#main").prepend(HTMLskills.replace(data, bio.skills));
 
@@ -139,16 +154,16 @@ $(document).click(function(loc) {
 });
 
 
-// Takes in a string of two names and returns an internationalized version
-// that looks like: Cameron PITTMAN.
-function inName(name) {
-    name = name.trim().split(" ");
-    console.log(name);
-    var first = name[0].slice(0,1).toUpperCase() + name[0].slice(1).toLowerCase();
-    var last = name[1].toUpperCase();
-    return first + " " + last;
-}
-// inName("sebastian thrun") === "Sebastian THRUN";
+// // Takes in a string of two names and returns an internationalized version
+// // that looks like: Cameron PITTMAN.
+// function inName(name) {
+//     name = name.trim().split(" ");
+//     console.log(name);
+//     var first = name[0].slice(0,1).toUpperCase() + name[0].slice(1).toLowerCase();
+//     var last = name[1].toUpperCase();
+//     return first + " " + last;
+// }
+// // inName("sebastian thrun") === "Sebastian THRUN";
 
 function displayEducation() {
     if(education.schools.length > 0) {
