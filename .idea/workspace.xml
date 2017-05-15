@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e0cf5191-4d96-4fcf-9384-13382e5cc890" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/formal.jpg" afterPath="$PROJECT_DIR$/images/formal.jpg" />
+    <list default="true" id="e0cf5191-4d96-4fcf-9384-13382e5cc890" name="Default" comment="Corrected Education information.">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/helper.js" afterPath="$PROJECT_DIR$/js/helper.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jQuery.js" afterPath="$PROJECT_DIR$/js/jQuery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/resumeBuilder.js" afterPath="$PROJECT_DIR$/js/resumeBuilder.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -60,8 +55,8 @@
       <file leaf-file-name="resumeBuilder.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/resumeBuilder.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1032">
-              <caret line="64" column="22" lean-forward="true" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="22" />
+            <state relative-caret-position="817">
+              <caret line="54" column="8" lean-forward="true" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="8" />
               <folding>
                 <marker date="1494890780914" expanded="true" signature="93:117" ph="{&quot;name&quot;: &quot;Stephen F. Hildebrand&quot;...}" />
               </folding>
@@ -285,7 +280,7 @@
       <workItem from="1492218737549" duration="1700000" />
       <workItem from="1492257403041" duration="133000" />
       <workItem from="1494881898156" duration="34000" />
-      <workItem from="1494881973702" duration="2826000" />
+      <workItem from="1494881973702" duration="3505000" />
     </task>
     <task id="LOCAL-00001" summary="Correct indentation, begin updating resumeBuilder with correct info.">
       <created>1491601373537</created>
@@ -322,11 +317,18 @@
       <option name="project" value="LOCAL" />
       <updated>1492257469662</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Corrected Education information.">
+      <created>1494891522172</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1494891522172</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48559000" />
+    <option name="totallyTimeSpent" value="49238000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -369,7 +371,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Correct indentation, begin updating resumeBuilder with correct info." />
     <MESSAGE value="Reorganized display order to bio, education, projects, work experience." />
-    <option name="LAST_COMMIT_MESSAGE" value="Reorganized display order to bio, education, projects, work experience." />
+    <MESSAGE value="Corrected Education information." />
+    <option name="LAST_COMMIT_MESSAGE" value="Corrected Education information." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -845,8 +848,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/resumeBuilder.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1032">
-          <caret line="64" column="22" lean-forward="true" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="22" />
+        <state relative-caret-position="817">
+          <caret line="54" column="8" lean-forward="true" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="8" />
           <folding>
             <marker date="1494890780914" expanded="true" signature="93:117" ph="{&quot;name&quot;: &quot;Stephen F. Hildebrand&quot;...}" />
           </folding>
