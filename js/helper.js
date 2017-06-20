@@ -13,71 +13,80 @@ to replace the %data% placeholder text you see in each.
 
 /* HEADER */
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
-var HTMLheaderRole = '<span>%data%</span><hr>';
+var HTMLheaderRole = '<span>%data%</span><br>';
 
 /* CONTACTS */
-var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="white-text"><a href="#">%data%</a></span></li>';
-var HTMLmobile = '<li class="flex-item"><span class="orange-text">mobile</span><span class="white-text"><a href="#">%data%</a></span></li>';
-var HTMLemail = '<li class="flex-item"><span class="orange-text">email</span><span class="white-text"><a href="#">%data%</a></span></li>';
-var HTMLtwitter = '<li class="flex-item"><span class="orange-text">twitter</span><span class="white-text"><a href="#">%data%</a></span></li>';
-var HTMLgithub = '<li class="flex-item"><span class="orange-text">github</span><span class="white-text"><a href="#">%data%</a></span></li>';
-var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</span><span class="white-text"><a href="#">%data%</a></span></li>';
-var HTMLbioPic = '<img src="%data% " alt="title" class="biopic">';
-var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
-var HTMLstatus = '<span class="status">%data%</span>';
+var HTMLbioStart = '<div class="bio-entry"></div>';
+var HTMLbioPic = '<img src="%data% " alt="profile" class="biopic">';
+var HTMLwelcomeMsg = '<span class="welcome-message text-primary-color">%data%</span>';
+// var HTMLstatus = '<br><span class="status secondary-text-color">Status: %data%</span>';
+
+var HTMLmobileIcon = '<a href="#"><img alt="mobile" src="images/icons/mobile.png" width="50" height="50"></a>';
+var HTMLemailIcon = '<a href="#"><img alt="email" src="images/icons/email.png" width="50" height="50"></a>';
+var HTMLtwitterIcon = '<a href="#"><img alt="twitter" src="images/icons/twitter.png" width="50" height="50"></a>';
+var HTMLgithubIcon = '<a href="#"><img alt="github" src="images/icons/github.png" width="50" height="50"></a>';
+var HTMLlocationIcon = '<a href="#"><img alt="location" src="images/icons/location.png" width="50" height="50"></a>';
+
 
 /* SKILLS */
 var HTMLskillsStart = '<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills" class="flex-column"></ul>';
-var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
+var HTMLskills = '<li class="flex-item"><span class="text-primary-color">%data%</span></li>';
 
 /* EDUCATION */
 var HTMLschoolStart = '<div class="education-entry"></div>';
 var HTMLschoolName = '<a href="#">%data%';
-var HTMLschoolLocation = '<div class="location-text">%data%</div>';
+var HTMLschoolLocation = '<div class="location-text secondary-text-color">%data%</div>';
 var HTMLschoolDegree = ' -- %data%</a>';
-var HTMLschoolMajor = '<br><div class="major-text">%data%</div>';
-var HTMLschoolDates = '<div class="date-text">%data%</div>';
-var HTMLschoolURL = '<br><a href="#">%data%</a>';
+var HTMLschoolMajor = '<div class="major-text">%data%</div>';
+var HTMLschoolDates = '<div class="date-text secondary-text-color">%data%</div>';
 
-/* ONLINE CLASSES */
-var HTMLonlineClasses = '<h3>Online Classes</h3>';
-var HTMLonlineTitle = '<a href="#">%data%';
-var HTMLonlineSchool = ' - %data%</a>';
-var HTMLonlineDates = '<div class="dates-text">%data%</div>';
-var HTMLonlineURL = '<br><a href="#">%data%</a>';
+// /* ONLINE CLASSES */
+// var HTMLonlineClasses = '<h3>Online Classes</h3>';
+// var HTMLonlineTitle = '<a href="#">%data%';
+// var HTMLonlineSchool = ' - %data%</a>';
+// var HTMLonlineDates = '<div class="date-text">%data%</div>';
+// var HTMLonlineURL = '<br><a href="#">%data%</a>';
 
 /* WORK */
 var HTMLworkStart = '<div class="work-entry"></div>';
 var HTMLworkEmployer = '<a href="#">%data%';
 var HTMLworkTitle = ' - %data%</a>';
-var HTMLworkDates = '<div class="dates-text">%data%</div>';
-var HTMLworkLocation = '<div class="location-text">%data%</div>';
-var HTMLworkDescription = '<p><br>%data%</p>';
+var HTMLworkDates = '<div class="date-text">%data%</div>';
+var HTMLworkLocation = '<div class="location-text secondary-text-color">%data%</div>';
+var HTMLworkDescription = '<p>%data%</p>';
 
 /* PROJECTS */
 var HTMLprojectStart = '<div class="proj-entry"></div>';
 var HTMLprojectTitle = '<a href="#">%data%</a>';
-var HTMLprojectDates = '<div class="dates-text">%data%</div>';
-var HTMLprojectDescription = '<p><br>%data%</p>';
+var HTMLprojectDates = '<div class="date-text">%data%</div>';
+var HTMLprojectDescription = '<p>%data%</p>';
 var HTMLprojectImage = '<img src="%data%">';
-var HTMLprojectURL = '<br><a href="#">%data%</a>';
 
 /* FOOTER */
-var internationalizeButton = '<button>Internationalize</button>';
+var footerButton = '<button onclick="scrollToTop()" class="fab-main">^</button>';
 var googleMap = '<div id="map"></div>';
 
 
+// /*
+// Helper code that hooks up your code to the button you'll be
+// appending. This runs a function that internationalizes the name.
+// */
+// $(document).ready(function() {
+//   $('button').click(function() {
+//     var $name = $('#name');
+//     var iName = inName($name.text()) || function(){};
+//     $name.html(iName);
+//   });
+// });
+
 /*
-Helper code that hooks up your code to the button you'll be
-appending. This runs a function that internationalizes the name.
-*/
-$(document).ready(function() {
-  $('button').click(function() {
-    var $name = $('#name');
-    var iName = inName($name.text()) || function(){};
-    $name.html(iName);
-  });
-});
+Simple helper function to scroll to the top of the page. Used by the
+Scroll to top button.
+ */
+function scrollToTop() {
+  document.body.scrollTop = 0; // For Chrome, Safari and Opera
+  document.documentElement.scrollTop = 0; // For IE and Firefox
+}
 
 /*
 The next few lines about mouse clicks are for collecting click
