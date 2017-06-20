@@ -217,3 +217,4 @@ pip-log.txt
 images/sample-site.png
 images/palette.css
 *.xml
+.well-known/
