@@ -27,7 +27,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   -->
 
   <!-- <script src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBv4Vg5fJdTmuH_WU44f6HxG2tOFXSc_Ds"></script> -->
-  <script src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAh9E1FcbRpq1ldQt0LLB2A2t11w4Ht8OY"></script>
+  <!--<script src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAh9E1FcbRpq1ldQt0LLB2A2t11w4Ht8OY"></script>-->
 
   <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
@@ -37,26 +37,26 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   Everything from here to the <script> tag below is the skeleton of your
   website. Your code will add info to each section of the resume below.
   -->
-  <div id="header" class='center-content gray-dark'>
-    <ul id="topContacts" class='flex-box'></ul>
+  <div id="header" class='center-content dark-primary-color'></div>
+  <div id="bio" class='default-primary-color'>
+    <ul id="topContacts" class='flex-box gather-top'></ul>
   </div>
   <div style="clear: both;"></div>
-  <div id="education" class='gray'>
+  <div id="education" class='block-title secondary-text-color'>
     <h2>Education</h2>
-  </div>
-  <div id="projects" class='gray'>
+  </div><hr>
+  <div id="projects" class='block-title divider-color secondary-text-color'>
     <h2>Projects</h2>
-  </div>
-  <div id="workExperience" class='gray'>
+  </div><hr>
+  <div id="workExperience" class='block-title secondary-text-color'>
     <h2>Work Experience</h2>
   </div>
-  <div id="mapDiv">
-    <h2>Where I've Lived and Worked</h2>
-  </div>
-  <div id="lets-connect">
-    <h2 class="orange center-text">Let's Connect</h2>
-    <ul id="footerContacts" class="flex-box gray">
-    </ul>
+  <!--<div id="mapDiv" class='secondary-text-color'>-->
+      <!--<h2>Where I've Lived and Worked</h2>-->
+  <!--</div>-->
+  <div id="lets-connect" class='block-title light-primary-color'>
+    <h2 class="default-primary-color center-text">Let's Connect</h2>
+    <ul id="footerContacts" class="flex-box block-title light-primary-color gather-foot"></ul>
   </div>
 </div>
 
@@ -65,17 +65,16 @@ If the JavaScript is loaded first and it is supposed to affect the HTML below
 it, it might not work, as the JavaScript would be loaded before the HTML it
 is supposed to work on. Therefore, putting JavaScript near the bottom of the
 HTML page is often the best strategy."
-https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/JavaScript_basics -->
+https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/JavaScript_basics
 
-<!-- "Javascript assets, by default, tend to block any other parallel
+"Javascript assets, by default, tend to block any other parallel
 downloads from occurring. So, you can imagine if you have plenty of <script>
 tags in the head, calling on multiple external scripts will block the HTML
 from loading, thus greeting the user with a blank white screen, because no
 other content on your page will load until the JS files have completely
 loaded."
-http://stackoverflow.com/questions/4396849/does-the-script-tag-position-in-html-affects-performance-of-the-webpage -->
+http://stackoverflow.com/questions/4396849/does-the-script-tag-position-in-html-affects-performance-of-the-webpage
 
-<!--
 jQuery is a common JavaScript library for reading and making changes to the
 Document Object Model (DOM). The DOM is a tree that contains information
 about what is actually visible on a website.
@@ -86,8 +85,7 @@ its ability to manipulate the DOM, which is essentially a JavaScript
 object. When JavaScript makes something interesting happen on a
 website, it's likely the action happened because JavaScript changed
 the DOM. jQuery is fast and easy to use, but it doesn't do anything
-you can't accomplish with vanilla (regular) JavaScript.
--->
+you can't accomplish with vanilla (regular) JavaScript.-->
 <script src="js/jQuery.js"></script>
 
 <!-- See the helper.js class for more info on it. -->
@@ -133,9 +131,9 @@ then appear because the if statement in index.html will no longer be true.
   if (document.getElementsByClassName('flex-item').length === 0) {
     document.getElementById('lets-connect').style.backgroundColor = 'black';
   }
-  if (document.getElementById('map') === null) {
-    document.getElementById('mapDiv').style.backgroundColor = 'black';
-  }
+//  if (document.getElementById('map') === null) {
+//    document.getElementById('mapDiv').style.backgroundColor = 'black';
+//  }
 
 </script>
 </body>
