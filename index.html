@@ -3,64 +3,61 @@
 <!--
 The main HTML document. Contains links to all of the CSS and JS resources
 needed to render the resume, including resumeBuilder.js.
+-->
 
+<!--
 The <head> of a website generally links to important resources the page will
 need to load. You'll see a lot of <link>s to CSS files for styles and
 <scripts> for JavaScript files to build interactions.
 -->
 <html>
 <head>
-    <!-- This tells the browser how to read the document. -->
-    <meta charset="utf-8">
-    <!-- Tells the browser what the title of this page should be. -->
-    <title>Stephen Hildebrand</title>
-    <!-- Load the page styles. -->
-    <link href="css/style.css" rel="stylesheet" type="text/css"></link>
+  <!-- This tells the browser how to read the document. -->
+  <meta charset="utf-8">
+  <!-- Tells the browser what the title of this page should be. -->
+  <title>Stephen Hildebrand</title>
+  <!-- Load the page styles. -->
+  <link href="css/style.css" rel="stylesheet" type="text/css"></link>
 
-    <!-- Linked further down below already:
-    <script src="js/jQuery.js"></script>
-    <script src="js/helper.js"></script> -->
+  <!--
+  Uncomment the <script> tag below when you're ready to add an interactive
+  Google Map to your resume!
+  Maps JS API Key: AIzaSyAh9E1FcbRpq1ldQt0LLB2A2t11w4Ht8OY
+                   AIzaSyBv4Vg5fJdTmuH_WU44f6HxG2tOFXSc_Ds
+  -->
 
-    <!--
-    Uncomment the <script> tag below when you're ready to add an interactive
-    Google Map to your resume!
-    Maps JS API Key: AIzaSyAh9E1FcbRpq1ldQt0LLB2A2t11w4Ht8OY
-                     AIzaSyBv4Vg5fJdTmuH_WU44f6HxG2tOFXSc_Ds
-    -->
-    <!-- <script src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBv4Vg5fJdTmuH_WU44f6HxG2tOFXSc_Ds"></script> -->
-    <script src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAh9E1FcbRpq1ldQt0LLB2A2t11w4Ht8OY"></script>
+  <!-- <script src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBv4Vg5fJdTmuH_WU44f6HxG2tOFXSc_Ds"></script> -->
+  <script src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAh9E1FcbRpq1ldQt0LLB2A2t11w4Ht8OY"></script>
 
-
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 <body>
 <div id="main">
-    <!--
-    Everything from here to the <script> tag below is the skeleton of your
-    website. Your code will add info to each section of the resume below.
-    -->
-    <div id="header" class='center-content dark-gray'>
-        <ul id="topContacts" class='flex-box'></ul>
-    </div>
-    <div style="clear: both;"></div>
-    <div id="education" class='gray'>
-        <h2>Education</h2>
-    </div>
-    <div id="projects" class='gray'>
-        <h2>Projects</h2>
-
-    </div>
-    <div id="workExperience" class='gray'>
-        <h2>Work Experience</h2>
-    </div>
-    <div id="mapDiv">
-        <h2>Where I've Lived and Worked</h2>
-    </div>
-    <div id="lets-connect">
-        <h2 class="orange center-text">Let's Connect</h2>
-        <ul id="footerContacts" class="flex-box">
-        </ul>
-    </div>
+  <!--
+  Everything from here to the <script> tag below is the skeleton of your
+  website. Your code will add info to each section of the resume below.
+  -->
+  <div id="header" class='center-content gray-dark'>
+    <ul id="topContacts" class='flex-box'></ul>
+  </div>
+  <div style="clear: both;"></div>
+  <div id="education" class='gray'>
+    <h2>Education</h2>
+  </div>
+  <div id="projects" class='gray'>
+    <h2>Projects</h2>
+  </div>
+  <div id="workExperience" class='gray'>
+    <h2>Work Experience</h2>
+  </div>
+  <div id="mapDiv">
+    <h2>Where I've Lived and Worked</h2>
+  </div>
+  <div id="lets-connect">
+    <h2 class="orange center-text">Let's Connect</h2>
+    <ul id="footerContacts" class="flex-box gray">
+    </ul>
+  </div>
 </div>
 
 <!-- "HTML is loaded by the browser in the order it appears in the file.
@@ -76,7 +73,7 @@ tags in the head, calling on multiple external scripts will block the HTML
 from loading, thus greeting the user with a blank white screen, because no
 other content on your page will load until the JS files have completely
 loaded."
- http://stackoverflow.com/questions/4396849/does-the-script-tag-position-in-html-affects-performance-of-the-webpage -->
+http://stackoverflow.com/questions/4396849/does-the-script-tag-position-in-html-affects-performance-of-the-webpage -->
 
 <!--
 jQuery is a common JavaScript library for reading and making changes to the
@@ -93,7 +90,7 @@ you can't accomplish with vanilla (regular) JavaScript.
 -->
 <script src="js/jQuery.js"></script>
 
-<!-- More on helper.js in the class -->
+<!-- See the helper.js class for more info on it. -->
 <script src="js/helper.js"></script>
 
 <!--
@@ -109,37 +106,36 @@ a quiz. Essentially, the next few lines are checking to see if you have not
 changed each section of the resume. If you have not made any changes to a section
 of the resume, then that part of the resume does not show up. More on this in the
 course.
+
+If the %data% substring in the HTMLheaderName variable is replaced with the
+bio.name property and the result is appended to the #header element, skills can
+then appear because the if statement in index.html will no longer be true.
 -->
 <script>
 
-    if (document.getElementsByClassName('flex-item').length === 0) {
-        document.getElementById('topContacts').style.backgroundColor = 'none';
-    }
-    // This if statement prevents anything from displaying within the
-    // #header element when there is no h1 element in the document.
-    //
-    // If the %data% substring in the HTMLheaderName variable is replaced
-    // with the bio.name property and the result is appended to the #header
-    // element, skills can then appear because the if statement in
-    // index.html will no longer be true.
-    if (document.getElementsByTagName('h1').length === 0) {
-        document.getElementById('header').style.backgroundColor = 'none';
-    }
-    if (document.getElementsByClassName('work-entry').length === 0) {
-        document.getElementById('workExperience').style.backgroundColor = 'black';
-    }
-    if (document.getElementsByClassName('project-entry').length === 0) {
-        document.getElementById('projects').style.backgroundColor = 'black';
-    }
-    if (document.getElementsByClassName('education-entry').length === 0) {
-        document.getElementById('education').style.backgroundColor = 'black';
-    }
-    if (document.getElementsByClassName('flex-item').length === 0) {
-        document.getElementById('lets-connect').style.backgroundColor = 'black';
-    }
-    if (document.getElementById('map') === null) {
-        document.getElementById('mapDiv').style.backgroundColor = 'black';
-    }
+  if (document.getElementsByClassName('flex-item').length === 0) {
+    document.getElementById('topContacts').style.backgroundColor = 'none';
+  }
+  // This if statement prevents anything from displaying within the
+  // #header element when there is no h1 element in the document.
+  if (document.getElementsByTagName('h1').length === 0) {
+    document.getElementById('header').style.backgroundColor = 'none';
+  }
+  if (document.getElementsByClassName('work-entry').length === 0) {
+    document.getElementById('workExperience').style.backgroundColor = 'black';
+  }
+  if (document.getElementsByClassName('proj-entry').length === 0) {
+    document.getElementById('projects').style.backgroundColor = 'black';
+  }
+  if (document.getElementsByClassName('education-entry').length === 0) {
+    document.getElementById('education').style.backgroundColor = 'black';
+  }
+  if (document.getElementsByClassName('flex-item').length === 0) {
+    document.getElementById('lets-connect').style.backgroundColor = 'black';
+  }
+  if (document.getElementById('map') === null) {
+    document.getElementById('mapDiv').style.backgroundColor = 'black';
+  }
 
 </script>
 </body>
