@@ -1,70 +1,75 @@
-/*
+/**********
 Overview:
 This file contains all of the code running in the background that makes
 resumeBuilder.js possible. We call these helper functions because they support
 your code in this course.
-
-Don't worry, you'll learn what's going on in this file throughout the course.
-You won't need to make any changes to it until you start experimenting with
-inserting a Google Map in Problem Set 3.
-*/
+**********/
 
 
 /*
-These are HTML strings. As part of the course, you'll be using JavaScript functions
-to replace the %data% placeholder text you see in them.
+These are HTML strings. JavaScript functions are used
+to replace the %data% placeholder text you see in each.
 */
+
+/* HEADER */
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
 var HTMLheaderRole = '<span>%data%</span><hr>';
 
-var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="white-text">%data%</span></li>';
-var HTMLmobile = '<li class="flex-item"><span class="orange-text">mobile</span><span class="white-text">%data%</span></li>';
-var HTMLemail = '<li class="flex-item"><span class="orange-text">email</span><span class="white-text">%data%</span></li>';
-var HTMLgithub = '<li class="flex-item"><span class="orange-text">github</span><span class="white-text">%data%</span></li>';
-var HTMLblog = '<li class="flex-item"><span class="orange-text">blog</span><span class="white-text">%data%</span></li>';
-var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</span><span class="white-text">%data%</span></li>';
-
-var HTMLbioPic = '<img src="%data%" class="biopic">';
+/* CONTACTS */
+var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="white-text"><a href="#">%data%</a></span></li>';
+var HTMLmobile = '<li class="flex-item"><span class="orange-text">mobile</span><span class="white-text"><a href="#">%data%</a></span></li>';
+var HTMLemail = '<li class="flex-item"><span class="orange-text">email</span><span class="white-text"><a href="#">%data%</a></span></li>';
+var HTMLtwitter = '<li class="flex-item"><span class="orange-text">twitter</span><span class="white-text"><a href="#">%data%</a></span></li>';
+var HTMLgithub = '<li class="flex-item"><span class="orange-text">github</span><span class="white-text"><a href="#">%data%</a></span></li>';
+var HTMLlocation = '<li class="flex-item"><span class="orange-text">location</span><span class="white-text"><a href="#">%data%</a></span></li>';
+var HTMLbioPic = '<img src="%data% " alt="title" class="biopic">';
 var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
+var HTMLstatus = '<span class="status">%data%</span>';
 
+/* SKILLS */
 var HTMLskillsStart = '<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills" class="flex-column"></ul>';
 var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li>';
 
-var HTMLworkStart = '<div class="work-entry"></div>';
-var HTMLworkEmployer = '<a href="#">%data%';
-var HTMLworkTitle = ' - %data%</a>';
-var HTMLworkDates = '<div class="date-text">%data%</div>';
-var HTMLworkLocation = '<div class="location-text">%data%</div>';
-var HTMLworkDescription = '<p><br>%data%</p>';
-
-var HTMLprojectStart = '<div class="project-entry"></div>';
-var HTMLprojectTitle = '<a href="#">%data%</a>';
-var HTMLprojectDates = '<div class="date-text">%data%</div>';
-var HTMLprojectDescription = '<p><br>%data%</p>';
-var HTMLprojectImage = '<img src="%data%">';
-
+/* EDUCATION */
 var HTMLschoolStart = '<div class="education-entry"></div>';
 var HTMLschoolName = '<a href="#">%data%';
-var HTMLschoolDegree = ' -- %data%</a>';
-var HTMLschoolDates = '<div class="date-text">%data%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
-var HTMLschoolMajor = '<em><br>%data%</em>';
+var HTMLschoolDegree = ' -- %data%</a>';
+var HTMLschoolMajor = '<br><div class="major-text">%data%</div>';
+var HTMLschoolDates = '<div class="date-text">%data%</div>';
+var HTMLschoolURL = '<br><a href="#">%data%</a>';
 
+/* ONLINE CLASSES */
 var HTMLonlineClasses = '<h3>Online Classes</h3>';
 var HTMLonlineTitle = '<a href="#">%data%';
 var HTMLonlineSchool = ' - %data%</a>';
-var HTMLonlineDates = '<div class="date-text">%data%</div>';
+var HTMLonlineDates = '<div class="dates-text">%data%</div>';
 var HTMLonlineURL = '<br><a href="#">%data%</a>';
 
+/* WORK */
+var HTMLworkStart = '<div class="work-entry"></div>';
+var HTMLworkEmployer = '<a href="#">%data%';
+var HTMLworkTitle = ' - %data%</a>';
+var HTMLworkDates = '<div class="dates-text">%data%</div>';
+var HTMLworkLocation = '<div class="location-text">%data%</div>';
+var HTMLworkDescription = '<p><br>%data%</p>';
+
+/* PROJECTS */
+var HTMLprojectStart = '<div class="proj-entry"></div>';
+var HTMLprojectTitle = '<a href="#">%data%</a>';
+var HTMLprojectDates = '<div class="dates-text">%data%</div>';
+var HTMLprojectDescription = '<p><br>%data%</p>';
+var HTMLprojectImage = '<img src="%data%">';
+var HTMLprojectURL = '<br><a href="#">%data%</a>';
+
+/* FOOTER */
 var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';
 
 
 /*
-The Internationalize Names challenge found in the lesson Flow Control from
-JavaScript Basics requires you to create a function that will need this helper
-code to run. Don't delete! It hooks up your code to the button you'll be
-appending.
+Helper code that hooks up your code to the button you'll be
+appending. This runs a function that internationalizes the name.
 */
 $(document).ready(function() {
   $('button').click(function() {
@@ -75,11 +80,11 @@ $(document).ready(function() {
 });
 
 /*
-The next few lines about clicks are for the Collecting Click Locations quiz
-in the lesson Flow Control from JavaScript Basics.
+The next few lines about mouse clicks are for collecting click
+Locations. Nothing is currently done with this information other
+than logging to the console.
 */
-var clickLocations = [];
-
+var clickLocations = [];    // initialize array of clickLocations
 function logClicks(x,y) {
   clickLocations.push(
     {
@@ -89,27 +94,29 @@ function logClicks(x,y) {
   );
   console.log('x location: ' + x + '; y location: ' + y);
 }
-
 $(document).click(function(loc) {
-  // your code goes here!
+  // TODO: Future code to use click info will go here.
 });
 
 
+/*******************************************************************************
+ *                      CUSTOM GOOGLE MAP GENERATION
+ ******************************************************************************/
 
 /*
-This is the fun part. Here's where we generate the custom Google Map for the website.
+This next section is where we generate the custom Google Map for the website.
 See the documentation below for more details.
 https://developers.google.com/maps/documentation/javascript/reference
 */
 var map;    // declares a global map variable
 
-
 /*
-Start here! initializeMap() is called when page is loaded. From there, the
+The initializeMap() function is called when page is loaded. From there, the
 script iterates through all of the objects in the resume, collects the location
 strings and sends off those locations to the Google Place Search service. From
 there, the place search service results are turned into location pins on the
-map itself!
+map itself.
+
 Your Challenge:
 Your goal is to add an overlay with the name of each city that will appear when
 a user clicks on your map. Start by checking out the createMapMarker() function
@@ -118,7 +125,7 @@ that fires off an event when each marker gets clicked.
 */
 function initializeMap() {
 
-  var locations;
+  var locations;  // variable for the
 
   var mapOptions = {
     disableDefaultUI: true
@@ -129,7 +136,6 @@ function initializeMap() {
   appended to #mapDiv in resumeBuilder.js.
   */
   map = new google.maps.Map(document.querySelector('#map'), mapOptions);
-
 
   /*
   locationFinder() returns an array of every location string from the JSONs
@@ -153,8 +159,7 @@ function initializeMap() {
 
     // iterates through work locations and appends each location to
     // the locations array. Note that forEach is used for array iteration
-    // as described in the Udacity FEND Style Guide:
-    // https://udacity.github.io/frontend-nanodegree-styleguide/javascript.html#for-in-loop
+    // as described in the Udacity FEND Style Guide above.
     work.jobs.forEach(function(job){
       locations.push(job.location);
     });
@@ -163,7 +168,7 @@ function initializeMap() {
   }
 
   /*
-  -createMapMarker(placeData) reads Google Places search results to create map pins.
+  The createMapMarker(placeData) reads Google Places search results to create map pins.
   -placeData is the object returned from search results containing information
   about a single location.
   -createMapMarker() also creates an infoWindow object that will determines the
