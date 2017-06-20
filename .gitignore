@@ -216,3 +216,4 @@ pip-log.txt
 .mr.developer.cfg
 images/sample-site.png
 images/palette.css
+*.xml
