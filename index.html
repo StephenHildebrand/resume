@@ -111,26 +111,32 @@ then appear because the if statement in index.html will no longer be true.
 -->
 <script>
 
-  if (document.getElementsByClassName('flex-item').length === 0) {
-    document.getElementById('topContacts').style.backgroundColor = 'none';
-  }
-  // This if statement prevents anything from displaying within the
-  // #header element when there is no h1 element in the document.
-  if (document.getElementsByTagName('h1').length === 0) {
-    document.getElementById('header').style.backgroundColor = 'none';
-  }
-  if (document.getElementsByClassName('work-entry').length === 0) {
-    document.getElementById('workExperience').style.backgroundColor = 'black';
-  }
-  if (document.getElementsByClassName('proj-entry').length === 0) {
-    document.getElementById('projects').style.backgroundColor = 'black';
-  }
-  if (document.getElementsByClassName('education-entry').length === 0) {
-    document.getElementById('education').style.backgroundColor = 'black';
-  }
-  if (document.getElementsByClassName('flex-item').length === 0) {
-    document.getElementById('lets-connect').style.backgroundColor = 'black';
-  }
+if (document.getElementsByClassName('flex-item').length === 0) {
+  document.getElementById('topContacts').style.backgroundColor = 'none';
+}
+
+// The if statements below prevent anything from displaying within the
+// #header element when there is no h1 element in the document.
+if (document.getElementsByTagName('h1').length === 0) {
+  document.getElementById('header').style.backgroundColor = 'none';
+}
+
+if (document.getElementsByClassName('work-entry').length === 0) {
+  document.getElementById('workExperience').style.backgroundColor = 'black';
+}
+
+if (document.getElementsByClassName('proj-entry').length === 0) {
+  document.getElementById('projects').style.backgroundColor = 'black';
+}
+
+if (document.getElementsByClassName('education-entry').length === 0) {
+  document.getElementById('education').style.backgroundColor = 'black';
+}
+
+if (document.getElementsByClassName('flex-item').length === 0) {
+  document.getElementById('lets-connect').style.backgroundColor = 'black';
+}
+
 //  if (document.getElementById('map') === null) {
 //    document.getElementById('mapDiv').style.backgroundColor = 'black';
 //  }
