@@ -219,3 +219,4 @@ images/palette.css
 *.xml
 .well-known/
 .idea/dictionaries/stephen.xml
+.idea/workspace.xml
