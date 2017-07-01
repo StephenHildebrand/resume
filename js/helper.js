@@ -1,16 +1,11 @@
-/**********
+/*
 Overview:
 This file contains all of the code running in the background that makes
 resumeBuilder.js possible. We call these helper functions because they support
 your code in this course.
-**********/
-
-
-/*
+<p>
 These are HTML strings. JavaScript functions are used
-to replace the %data% placeholder text you see in each.
-*/
-
+to replace the %data% placeholder text you see in each.*/
 /* HEADER */
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
 var HTMLheaderRole = '<span>%data%</span><br>';
@@ -19,17 +14,17 @@ var HTMLheaderRole = '<span>%data%</span><br>';
 var HTMLbioStart = '<div class="bio-entry"></div>';
 var HTMLbioPic = '<img src="%data% " alt="profile" class="biopic">';
 var HTMLwelcomeMsg = '<span class="welcome-message text-primary-color">%data%</span>';
+
 // var HTMLstatus = '<br><span class="status secondary-text-color">Status: %data%</span>';
-
-var HTMLmobileIcon = '<a href="#"><img alt="mobile" src="images/icons/mobile.png" width="50" height="50"></a>';
-var HTMLemailIcon = '<a href="#"><img alt="email" src="images/icons/email.png" width="50" height="50"></a>';
-var HTMLtwitterIcon = '<a href="#"><img alt="twitter" src="images/icons/twitter.png" width="50" height="50"></a>';
-var HTMLgithubIcon = '<a href="#"><img alt="github" src="images/icons/github.png" width="50" height="50"></a>';
-var HTMLlocationIcon = '<a href="#"><img alt="location" src="images/icons/location.png" width="50" height="50"></a>';
-
+var HTMLmobileIcon = '<a href="#"><img alt="mobile" src="%data%" width="50" height="50"></a>';
+var HTMLemailIcon = '<a href="#"><img alt="email" src="%data%" width="50" height="50"></a>';
+var HTMLtwitterIcon = '<a href="#"><img alt="twitter" src="%data%" width="50" height="50"></a>';
+var HTMLgithubIcon = '<a href="#"><img alt="github" src="%data%" width="50" height="50"></a>';
+var HTMLlocationIcon = '<a href="#"><img alt="location" src="%data%" width="50" height="50"></a>';
 
 /* SKILLS */
-var HTMLskillsStart = '<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills" class="flex-column"></ul>';
+var HTMLskillsStart = `<h3 id="skills-h3">Skills at a Glance:</h3>
+<ul id="skills" class="flex-column"></ul>`;
 var HTMLskills = '<li class="flex-item"><span class="text-primary-color">%data%</span></li>';
 
 /* EDUCATION */
@@ -65,7 +60,6 @@ var HTMLprojectImage = '<img src="%data%">';
 /* FOOTER */
 var footerButton = '<button onclick="scrollToTop()" class="fab-main">^</button>';
 var googleMap = '<div id="map"></div>';
-
 
 // /*
 // Helper code that hooks up your code to the button you'll be
