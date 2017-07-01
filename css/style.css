@@ -96,8 +96,9 @@ p {
 }
 
 a {
-  color: #00bcd4;
-  text-decoration: none;
+  /*color: #00bcd4;*/
+  color: #000000;
+  text-decoration: underline;
   font-weight: bold;
   margin-top: 10px;
   display: inline-flex;
