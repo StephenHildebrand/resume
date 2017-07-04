@@ -17,7 +17,6 @@ var bio = {
   name: 'Stephen Hildebrand',
   role: 'Software Developer (under-construction)',
   contacts: {
-    // NEW
     mobile: {
       text: '(919) 891-0611',
       url: 'tel:+19198910611',
@@ -62,7 +61,6 @@ var bio = {
     'Windows, UNIX/Linux, Android',
     'Linux server builder/maintainer (personal)',
     'Effective worker in both independent and team settings',
-    'Strong/effective communicator',
     'Fluent in English/Spanish',
   ],
   bioPic: 'images/formal.jpg',
@@ -151,7 +149,7 @@ var projects = {
       images: [
         'images/screens/trax_screen1.png',
         'images/screens/trax_screen2.png',
-        'images/screens/trax_screen3.png',
+        'images/placeholder_small.png',
       ],
       url: 'https://github.com/StephenHildebrand/trax',
     },
@@ -274,8 +272,7 @@ function displayEducation() {
   if (education.schools.length > 0) {
     $('#education').append(HTMLschoolStart);
     for (sch in education.schools) {
-      var formattedName = HTMLschoolName.replace('%data%', education.schools[sch].name);
-      formattedName.replace('#', education.schools[sch].url);
+      var formattedName = HTMLschoolName.replace('%data%', education.schools[sch].name);formattedName.replace('#', education.schools[sch].url);
       var formattedDegree = HTMLschoolDegree.replace('%data%', education.schools[sch].degree);
       var formattedDates = HTMLschoolDates.replace('%data%', education.schools[sch].dates);
       var formattedLocation = HTMLschoolLocation.replace('%data%', education.schools[sch].location);
@@ -301,26 +298,22 @@ function displayProjects() {
     for (proj in projects.projects) {
       $('#projects').append(HTMLprojectStart);
 
-      var formattedTitle = HTMLprojectTitle.replace(
-        '%data%', projects.projects[proj].title).replace('#', projects.projects[proj].url);
-      var $$projEntry = $('.proj-entry:last');
+      var formattedTitle = HTMLprojectTitle.replace('%data%', projects.projects[proj].title).replace('#', projects.projects[proj].url);
+      var $projEntry = $('.proj-entry:last');
 
       $projEntry.append(formattedTitle);
 
       var formattedDates = HTMLprojectDates.replace('%data%', projects.projects[proj].dates);
       $projEntry.append(formattedDates);
 
-      var formattedDescription = HTMLprojectDescription.replace(
-        '%data%', projects.projects[proj].description);
+      var formattedDescription = HTMLprojectDescription.replace('%data%', projects.projects[proj].description);
       $projEntry.append(formattedDescription);
 
       // Check for 1 or more images.
       if (projects.projects[proj].images.length > 0) {
-        // for (var img = 0; img < projects.images.length; img++) {
-        for (image in projects.projects[proj].images) {
-          var formattedImage = HTMLprojectImage.replace(
-            '%data%', projects.projects[proj].images[image]);
-          $($projEntry).append(formattedImage);
+        for (img in projects.projects[proj].images) {
+          var $formattedImage = HTMLprojectImage.replace('#', projects.projects[proj].images[img]);
+          $($projEntry).append($formattedImage);
         }
       }
     }
@@ -346,10 +339,10 @@ function displayWork() {
       var $formattedLocation = HTMLworkLocation.replace('%data%', work.jobs[j].location);
 
       var $workEntry = $('.work-entry:last');
-      $workEntry.append(formattedEmployer + ' ' + formattedTitle);
-      $workEntry.append(formattedLocation);
-      $workEntry.append(formattedDates);
-      $workEntry.append(formattedDesc);
+      $workEntry.append($formattedEmployer + ' ' + $formattedTitle);
+      $workEntry.append($formattedLocation);
+      $workEntry.append($formattedDates);
+      $workEntry.append($formattedDesc);
     }
   }
 }
@@ -359,11 +352,21 @@ work.display();
 
 // $('#mapDiv').append(googleMap);
 
-var $footContactsEntry = $('#footerContacts');
-$footContactsEntry.append(HTMLmobileIcon.replace('#', bio.contacts.mobile.url));
-$footContactsEntry.append(HTMLemailIcon.replace('#', bio.contacts.email.url));
-$footContactsEntry.append(HTMLgithubIcon.replace('#', bio.contacts.github.url));
-$footContactsEntry.append(HTMLtwitterIcon.replace('#', bio.contacts.twitter.url));
-$footContactsEntry.append(HTMLlocationIcon.replace('#', bio.contacts.location.url));
+var $footContactsEntry = $('#footContacts');
+$footContactsEntry.append(
+  HTMLmobileIcon.replace('#', bio.contacts.mobile.url).replace('%data%', bio.contacts.mobile.icon)
+);
+$footContactsEntry.append(
+  HTMLemailIcon.replace('#', bio.contacts.email.url).replace('%data%', bio.contacts.email.icon)
+);
+$footContactsEntry.append(
+  HTMLgithubIcon.replace('#', bio.contacts.github.url).replace('%data%', bio.contacts.github.icon)
+);
+$footContactsEntry.append(
+  HTMLtwitterIcon.replace('#', bio.contacts.twitter.url).replace('%data%', bio.contacts.twitter.icon)
+);
+$footContactsEntry.append(
+  HTMLlocationIcon.replace('#', bio.contacts.location.url).replace('%data%', bio.contacts.location.icon)
+);
 
 $('#lets-connect').append(footerButton);
