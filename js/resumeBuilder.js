@@ -15,7 +15,7 @@ const $headerEntry = $('#header');
 
 const bio = {
   name: 'Stephen Hildebrand',
-  role: 'Software Developer (under-construction)',
+  role: 'Software Developer',
   contacts: {
     mobile: {
       text: '(919) 891-0611',
@@ -352,6 +352,7 @@ function displayProjects() {
       // Check for 1 or more images.
       if (projects.projects[proj].images.length > 0) {
         for (let img in projects.projects[proj].images) {
+          //noinspection JSUnfilteredForInLoop
           let $formattedImage = HTMLprojectImage.replace('#', projects.projects[proj].images[img]);
           $($projEntry).append($formattedImage);
         }
