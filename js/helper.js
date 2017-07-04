@@ -8,7 +8,7 @@ These are HTML strings. JavaScript functions are used
 to replace the %data% placeholder text you see in each.*/
 /* HEADER */
 let HTMLheaderName = '<h1 id="name">%data%</h1>';
-let HTMLheaderRole = '<span>%data%</span><br>';
+let HTMLheaderRole = '<span>%data%</span>';
 
 /* CONTACTS */
 let HTMLbioStart = '<div class="bio-entry"></div>';
@@ -16,11 +16,11 @@ let HTMLbioPic = '<img src="%data%" alt="profile" class="biopic">';
 let HTMLwelcomeMsg = '<span class="welcome-message text-primary-color">%data%</span>';
 
 // let HTMLstatus = '<br><span class="status secondary-text-color">Status: %data%</span>';
-let HTMLmobileIcon = '<a href="#"><img alt="mobile" src="%data%" width="50" height="50"></a>';
-let HTMLemailIcon = '<a href="#"><img alt="email" src="%data%" width="50" height="50"></a>';
-let HTMLtwitterIcon = '<a href="#"><img alt="twitter" src="%data%" width="50" height="50"></a>';
-let HTMLgithubIcon = '<a href="#"><img alt="github" src="%data%" width="50" height="50"></a>';
-let HTMLlocationIcon = '<a href="#"><img alt="location" src="%data%" width="50" height="50"></a>';
+let HTMLmobileIcon = '<a href="#"><img alt="mobile" src="%data%" width="48" height="48"></a>';
+let HTMLemailIcon = '<a href="#"><img alt="email" src="%data%" width="48" height="48"></a>';
+let HTMLtwitterIcon = '<a href="#"><img alt="twitter" src="%data%" width="48" height="48"></a>';
+let HTMLgithubIcon = '<a href="#"><img alt="github" src="%data%" width="48" height="48"></a>';
+let HTMLlocationIcon = '<a href="#"><img alt="location" src="%data%" width="48" height="48"></a>';
 
 /* SKILLS */
 let HTMLskillsStart = `<h3 id="skills-h3">Skills at a Glance:</h3>
@@ -29,7 +29,7 @@ let HTMLskills = '<li class="flex-item"><span class="text-primary-color">%data%<
 
 /* EDUCATION */
 let HTMLschoolStart = '<div class="education-entry"></div>';
-let HTMLschoolName = '<a href="#">%data%';
+let HTMLschoolName = '<hr><a href="#">%data%';
 let HTMLschoolLocation = '<div class="location-text secondary-text-color">%data%</div>';
 let HTMLschoolDegree = ' -- %data%</a>';
 let HTMLschoolMajor = '<div class="major-text">%data%</div>';
@@ -37,7 +37,7 @@ let HTMLschoolDates = '<div class="date-text secondary-text-color">%data%</div>'
 
 /* WORK */
 let HTMLworkStart = '<div class="work-entry"></div>';
-let HTMLworkEmployer = '<a href="#">%data%';
+let HTMLworkEmployer = '<hr><a href="#">%data%';
 let HTMLworkTitle = ' - %data%</a>';
 let HTMLworkDates = '<div class="date-text">%data%</div>';
 let HTMLworkLocation = '<div class="location-text secondary-text-color">%data%</div>';
@@ -45,7 +45,7 @@ let HTMLworkDescription = '<p>%data%</p>';
 
 /* PROJECTS */
 let HTMLprojectStart = '<div class="proj-entry"></div>';
-let HTMLprojectTitle = '<a href="#">%data%</a>';
+let HTMLprojectTitle = '<hr><a href="#">%data%</a>';
 let HTMLprojectDates = '<div class="date-text">%data%</div>';
 let HTMLprojectDescription = '<p>%data%</p>';
 
