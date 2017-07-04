@@ -7,62 +7,55 @@ your code in this course.
 These are HTML strings. JavaScript functions are used
 to replace the %data% placeholder text you see in each.*/
 /* HEADER */
-var HTMLheaderName = '<h1 id="name">%data%</h1>';
-var HTMLheaderRole = '<span>%data%</span><br>';
+let HTMLheaderName = '<h1 id="name">%data%</h1>';
+let HTMLheaderRole = '<span>%data%</span><br>';
 
 /* CONTACTS */
-var HTMLbioStart = '<div class="bio-entry"></div>';
-var HTMLbioPic = '<img src="%data%" alt="profile" class="biopic">';
-var HTMLwelcomeMsg = '<span class="welcome-message text-primary-color">%data%</span>';
+let HTMLbioStart = '<div class="bio-entry"></div>';
+let HTMLbioPic = '<img src="%data%" alt="profile" class="biopic">';
+let HTMLwelcomeMsg = '<span class="welcome-message text-primary-color">%data%</span>';
 
-// var HTMLstatus = '<br><span class="status secondary-text-color">Status: %data%</span>';
-var HTMLmobileIcon = '<a href="#"><img alt="mobile" src="%data%" width="50" height="50"></a>';
-var HTMLemailIcon = '<a href="#"><img alt="email" src="%data%" width="50" height="50"></a>';
-var HTMLtwitterIcon = '<a href="#"><img alt="twitter" src="%data%" width="50" height="50"></a>';
-var HTMLgithubIcon = '<a href="#"><img alt="github" src="%data%" width="50" height="50"></a>';
-var HTMLlocationIcon = '<a href="#"><img alt="location" src="%data%" width="50" height="50"></a>';
+// let HTMLstatus = '<br><span class="status secondary-text-color">Status: %data%</span>';
+let HTMLmobileIcon = '<a href="#"><img alt="mobile" src="%data%" width="50" height="50"></a>';
+let HTMLemailIcon = '<a href="#"><img alt="email" src="%data%" width="50" height="50"></a>';
+let HTMLtwitterIcon = '<a href="#"><img alt="twitter" src="%data%" width="50" height="50"></a>';
+let HTMLgithubIcon = '<a href="#"><img alt="github" src="%data%" width="50" height="50"></a>';
+let HTMLlocationIcon = '<a href="#"><img alt="location" src="%data%" width="50" height="50"></a>';
 
 /* SKILLS */
-var HTMLskillsStart = `<h3 id="skills-h3">Skills at a Glance:</h3>
+let HTMLskillsStart = `<h3 id="skills-h3">Skills at a Glance:</h3>
 <ul id="skills" class="flex-column"></ul>`;
-var HTMLskills = '<li class="flex-item"><span class="text-primary-color">%data%</span></li>';
+let HTMLskills = '<li class="flex-item"><span class="text-primary-color">%data%</span></li>';
 
 /* EDUCATION */
-var HTMLschoolStart = '<div class="education-entry"></div>';
-var HTMLschoolName = '<a href="#">%data%';
-var HTMLschoolLocation = '<div class="location-text secondary-text-color">%data%</div>';
-var HTMLschoolDegree = ' -- %data%</a>';
-var HTMLschoolMajor = '<div class="major-text">%data%</div>';
-var HTMLschoolDates = '<div class="date-text secondary-text-color">%data%</div>';
-
-// /* ONLINE CLASSES */
-// var HTMLonlineClasses = '<h3>Online Classes</h3>';
-// var HTMLonlineTitle = '<a href="#">%data%';
-// var HTMLonlineSchool = ' - %data%</a>';
-// var HTMLonlineDates = '<div class="date-text">%data%</div>';
-// var HTMLonlineURL = '<br><a href="#">%data%</a>';
+let HTMLschoolStart = '<div class="education-entry"></div>';
+let HTMLschoolName = '<a href="#">%data%';
+let HTMLschoolLocation = '<div class="location-text secondary-text-color">%data%</div>';
+let HTMLschoolDegree = ' -- %data%</a>';
+let HTMLschoolMajor = '<div class="major-text">%data%</div>';
+let HTMLschoolDates = '<div class="date-text secondary-text-color">%data%</div>';
 
 /* WORK */
-var HTMLworkStart = '<div class="work-entry"></div>';
-var HTMLworkEmployer = '<a href="#">%data%';
-var HTMLworkTitle = ' - %data%</a>';
-var HTMLworkDates = '<div class="date-text">%data%</div>';
-var HTMLworkLocation = '<div class="location-text secondary-text-color">%data%</div>';
-var HTMLworkDescription = '<p>%data%</p>';
+let HTMLworkStart = '<div class="work-entry"></div>';
+let HTMLworkEmployer = '<a href="#">%data%';
+let HTMLworkTitle = ' - %data%</a>';
+let HTMLworkDates = '<div class="date-text">%data%</div>';
+let HTMLworkLocation = '<div class="location-text secondary-text-color">%data%</div>';
+let HTMLworkDescription = '<p>%data%</p>';
 
 /* PROJECTS */
-var HTMLprojectStart = '<div class="proj-entry"></div>';
-var HTMLprojectTitle = '<a href="#">%data%</a>';
-var HTMLprojectDates = '<div class="date-text">%data%</div>';
-var HTMLprojectDescription = '<p>%data%</p>';
+let HTMLprojectStart = '<div class="proj-entry"></div>';
+let HTMLprojectTitle = '<a href="#">%data%</a>';
+let HTMLprojectDates = '<div class="date-text">%data%</div>';
+let HTMLprojectDescription = '<p>%data%</p>';
 
-var HTMLprojectImage = '<img src="#" alt="screen-shot" class="project-image">';
+let HTMLprojectImage = '<img src="#" alt="screen-shot" class="project-image">';
 
 /* MAP */
-// var googleMap = '<div id="map"></div>';
+// let googleMap = '<div id="map"></div>';
 
 // Scroll-to-top button.
-var footerButton = '<button onclick="scrollToTop()" class="fab-main">^</button>';
+let footerButton = '<button onclick="scrollToTop()" class="fab-main">^</button>';
 
 // /*
 // Helper code that hooks up your code to the button you'll be
@@ -70,8 +63,8 @@ var footerButton = '<button onclick="scrollToTop()" class="fab-main">^</button>'
 // */
 // $(document).ready(function() {
 //   $('button').click(function() {
-//     var $name = $('#name');
-//     var iName = inName($name.text()) || function(){};
+//     let $name = $('#name');
+//     let iName = inName($name.text()) || function(){};
 //     $name.html(iName);
 //   });
 // });
@@ -90,7 +83,7 @@ The next few lines about mouse clicks are for collecting click
 Locations. Nothing is currently done with this information other
 than logging to the console.
 */
-var clickLocations = [];    // initialize array of clickLocations
+let clickLocations = [];    // initialize array of clickLocations
 function logClicks(x,y) {
   clickLocations.push(
     {
@@ -114,7 +107,7 @@ This next section is where we generate the custom Google Map for the website.
 See the documentation below for more details.
 https://developers.google.com/maps/documentation/javascript/reference
 */
-var map;    // declares a global map variable
+let map;    // declares a global map variable
 
 /*
 The initializeMap() function is called when page is loaded. From there, the
@@ -131,9 +124,9 @@ that fires off an event when each marker gets clicked.
 */
 function initializeMap() {
 
-  var locations;  // variable for the
+  let locations;  // variable for the
 
-  var mapOptions = {
+  let mapOptions = {
     disableDefaultUI: true
   };
 
@@ -150,7 +143,7 @@ function initializeMap() {
   function locationFinder() {
 
     // initializes an empty array
-    var locations = [];
+    let locations = [];
 
     // adds the single location property from bio to the locations array
     locations.push(bio.contacts.location);
@@ -183,13 +176,13 @@ function initializeMap() {
   function createMapMarker(placeData) {
 
     // The next lines save location data from the search result object to local variables
-    var lat = placeData.geometry.location.lat();  // latitude from the place service
-    var lon = placeData.geometry.location.lng();  // longitude from the place service
-    var name = placeData.formatted_address;   // name of the place from the place service
-    var bounds = window.mapBounds;            // current boundaries of the map window
+    let lat = placeData.geometry.location.lat();  // latitude from the place service
+    let lon = placeData.geometry.location.lng();  // longitude from the place service
+    let name = placeData.formatted_address;   // name of the place from the place service
+    let bounds = window.mapBounds;            // current boundaries of the map window
 
     // marker is an object with additional data about the pin for a single location
-    var marker = new google.maps.Marker({
+    let marker = new google.maps.Marker({
       map: map,
       position: placeData.geometry.location,
       title: name
@@ -198,7 +191,7 @@ function initializeMap() {
     // infoWindows are the little helper windows that open when you click
     // or hover over a pin on a map. They usually contain more information
     // about a location.
-    var infoWindow = new google.maps.InfoWindow({
+    let infoWindow = new google.maps.InfoWindow({
       /*
       Try formatting the content of the infoWindow, which is simply a string
       that contains the overlay's HTML. Right now it's set to name, which is
@@ -249,12 +242,12 @@ function initializeMap() {
 
     // creates a Google place search service object. PlacesService does the work of
     // actually searching for location data.
-    var service = new google.maps.places.PlacesService(map);
+    let service = new google.maps.places.PlacesService(map);
 
     // Iterates through the array of locations, creates a search object for each location
       locations.forEach(function(place){
       // the search request object
-      var request = {
+      let request = {
         query: place
       };
 
