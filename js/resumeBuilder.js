@@ -49,7 +49,7 @@ const bio = {
     },
   },
   status: 'Seeking position as an entry-level software developer.',
-  welcomeMsg: `Bright, driven student with a diverse academic background, a focuson
+  welcomeMsg: `Bright, driven student with a diverse academic background, a focus on
   programming, a love for learning and a passion for software development.`,
   skills: [
     'Java (2 years)',
