@@ -35,6 +35,11 @@ let HTMLschoolDegree = ' -- %data%</a>';
 let HTMLschoolMajor = '<div class="major-text">%data%</div>';
 let HTMLschoolDates = '<div class="date-text secondary-text-color">%data%</div>';
 
+/* COURSES */
+const HTMLcourseRelevant = '<h3>Related Courses</h3>';
+let HTMLcourseTitle = '<p>- #</p>';
+let HTMLcourseNumber = '<p> (#)</p>';
+
 /* WORK */
 let HTMLworkStart = '<div class="work-entry"></div>';
 let HTMLworkEmployer = '<hr><a href="#">%data%';
