@@ -23,8 +23,7 @@ let HTMLgithubIcon = '<a href="#"><img alt="github" src="%data%" width="48" heig
 let HTMLlocationIcon = '<a href="#"><img alt="location" src="%data%" width="48" height="48"></a>';
 
 /* SKILLS */
-let HTMLskillsStart = `<h3 id="skills-h3">Skills at a Glance:</h3>
-<ul id="skills" class="flex-column"></ul>`;
+let HTMLskillsStart = `<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills" class="flex-column"></ul>`;
 let HTMLskills = '<li class="flex-item"><span class="text-primary-color">%data%</span></li>';
 
 /* EDUCATION */
@@ -36,9 +35,8 @@ let HTMLschoolMajor = '<div class="major-text">%data%</div>';
 let HTMLschoolDates = '<div class="date-text secondary-text-color">%data%</div>';
 
 /* COURSES */
-const HTMLcourseRelevant = '<h3>Related Courses</h3>';
-let HTMLcourseTitle = '<p>- #</p>';
-let HTMLcourseNumber = '<p> (#)</p>';
+const HTMLcoursesStart = `<hr><h3 id="courses-h3">Related Courses</h3><ul id="courses" class="flex-column"></ul>`;
+let HTMLcourses  = '<li class="flex-item"><span class="primary-text-color">%data% (#)</span></li>';
 
 /* WORK */
 let HTMLworkStart = '<div class="work-entry"></div>';
