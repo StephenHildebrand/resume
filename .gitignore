@@ -148,6 +148,5 @@ pip-log.txt
 #Mr Developer
 .mr.developer.cfg
 images/sample-site.png
-images/palette.css
 *.xml
 .well-known/
