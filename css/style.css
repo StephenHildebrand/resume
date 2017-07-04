@@ -164,7 +164,12 @@ ul {
 .biopic {
   float: left;
   padding: 10px;
-  width: 200px;
+  width: 240px;
+  display: none;
+}
+
+.project-image {
+  width: 340px;
   display: none;
 }
 
@@ -187,19 +192,28 @@ span {
   #lets-connect {
     margin-top: 5%;
   }
+  .project-image {
+    width: 300px;
+  }
 }
 
 @media only screen and (max-width:900px) {
   .biopic {
     width: 175px;
   }
+  .project-image {
+    width: 210px;
+  }
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 700px) {
   #lets-connect {
     margin-top: 10%;
   }
   .biopic {
+    width: 150px;
+  }
+  .project-image {
     width: 150px;
   }
   .welcome-message {
@@ -220,10 +234,13 @@ span {
   padding-bottom: 5%;
 }
 
-@media only screen and (min-width: 750px) {
+@media only screen and (min-width: 700px) {
   #skills-h3,
   .biopic {
     display: block;
+  }
+  .project-image {
+    display: inline-block;
   }
 }
 
