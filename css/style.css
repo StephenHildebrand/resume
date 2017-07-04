@@ -21,110 +21,118 @@ h6 {
 .education-entry,
 .work-entry,
 .proj-entry {
-  padding: 0 2.5%;
+  padding: 0 16px 8px;
+}
+
+.bio-entry {
+  padding: 16px;
 }
 
 h1 {
-  font-size: 42px;
-  line-height: 42px;
+  font-size: 45px;
+  line-height: 48px;
+  font-style: normal;
   display: inline;
 }
 
 h2 {
-  font-weight: bold;
-  font-size: 26px;
-  line-height: 26px;
-  padding: 4px;
+  font-size: 30px;
+  line-height: 32px;
+  padding: 16px 16px 0;
 }
 
 h3 {
   font-style: italic;
-  font-size: 22px;
+  font-size: 24px;
+  line-height: 32px;
   color: #000;
-  line-height: 22px;
 }
 
 h4 {
-  font-weight: bold;
-  font-size: 14px;
+  /*font-weight: bold;*/
+  font-size: 24px;
   color: #4a4a4a;
-  line-height: 17px;
+  line-height: 16px;
 }
 
-h2,
 h3,
 h4,
 h5 {
-  padding: 10px 2.5%;
+  padding: 16px;
 
 }
 
-.dark-primary-color    { background: #388e3c; }
-.default-primary-color { background: #4caf50; }
-.light-primary-color   { background: #c8e6c9; }
-.text-primary-color    { color: #ffffff; }
-.accent-color          { background: #00bcd4; }
-.primary-text-color    { color: #212121; }
-.secondary-text-color  { color: #757575; }
-.divider-color         { border-color: #bdbdbd; }
-
-.date-text {
-  font-style: italic;
-  font-size: 14px;
-  line-height: 16px;
+hr {
+  border-bottom-width: 1px;
+  border-color: transparent;
+  border-bottom-color: #e1e2e1;
+  margin: 16px -16px;
   display: block;
-  padding-left: 2px;
 }
+
+.dark-primary-color    { background: #00701a; }
+.default-primary-color { background: #43a047; }
+.light-primary-color   { background: #76d275; }
+.text-primary-color    { color: #ffffff; }
+.primary-text-color    { color: #212121; }
+.background-color      { background: #e1e2e1}
 
 .major-text {
-  font-style: italic;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.date-text {
   font-size: 16px;
   line-height: 18px;
+  font-style: italic;
+  display: block;
+  padding-left: 4px;
 }
 
 .location-text {
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 16px;
+  line-height: 18px;
+  margin: 16px;
   float: right;
 }
 
 p {
   font-size: 14px;
-  line-height: 18px;
+  line-height: 16px;
   border: transparent;
-  padding: 2px;
+  padding: 6px;
 }
 
 a {
+  font-size: 20px;
+  line-height: 22px;
   /*color: #00bcd4;*/
   color: #000000;
   text-decoration: underline;
-  font-weight: bold;
-  margin-top: 10px;
   display: inline-flex;
 }
 
 .welcome-message {
   font-style: italic;
   font-size: 18px;
-  line-height: 22px;
-  margin-top: 4px;
+  line-height: 24px;
+  margin-top: 12px;
 }
 
 #skills-h3 {
   display: block;
-  margin-top: 4px;
+  margin-top: 6px;
 }
 
 .block-title {
-  padding-bottom: 10px;
+  padding-bottom: 16px;
   clear: both;
 }
 
-/*!* TODO: Replace with image later *!*/
-/*#header {*/
-  /*background-color: #484848;*/
-/*}*/
+#header {
+  padding: 18px;
+}
 
 .flex-box {
   display: -webkit-flex;
@@ -132,14 +140,19 @@ a {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding-bottom: 2px;
+  padding-bottom: 16px;
 }
 
 .flex-column {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  padding: 2px;
+  padding: 6px;
+}
+
+.card {
+  margin: 16px;
+  background: #f5f5f6;
 }
 
 .center-content {
@@ -152,19 +165,19 @@ ul {
 }
 
 .gather-top {
-  margin-left: 25%;
-  margin-right: 25%;
+  padding-left: 15%;
+  padding-right: 15%;
 }
 
 .gather-foot {
-  padding-left: 25%;
-  padding-right: 25%;
+  padding-left: 15%;
+  padding-right: 15%;
 }
 
 .biopic {
   float: left;
-  padding: 10px;
-  width: 220px;
+  padding: 12px;
+  width: 240px;
   display: none;
 }
 
@@ -178,7 +191,7 @@ img {
 }
 
 span {
-  padding: 5px;
+  padding: 6px;
 }
 
 #lets-connect {
