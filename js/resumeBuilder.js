@@ -102,12 +102,38 @@ var education = {
       url: 'https://www.ncsu.edu',
     },
   ],
-  onlineCourses: [
+  courses: [
     {
-      title: 'JavaScript Basics',
-      school: 'Udacity',
-      dates: '2017',
-      url: 'https://www.udacity.com/',
+      title: 'Introduction to Computer Programming - Java',
+      number: 'CSC 116',
+    },
+    {
+      title: 'Programming Concepts in Java',
+      number: 'CSC 216',
+    },
+    {
+      title: 'Applied Discrete Mathematics',
+      number: 'CSC 226',
+    },
+    {
+      title: 'C and Software Tools',
+      number: 'CSC 230',
+    },
+    {
+      title: 'Computer Organization & Assembly Language',
+      number: 'CSC 236',
+    },
+    {
+      title: 'Concepts & Facilities of Operating Systems',
+      number: 'CSC 246',
+    },
+    {
+      title: 'Data Structures',
+      number: 'CSC 316',
+    },
+    {
+      title: 'Automata, Grammars & Computability',
+      number: 'CSC 333',
     },
   ],
   display: displayEducation,
@@ -275,12 +301,6 @@ function displayBio() {
   $topContactsEntry.append(HTMLlocationIcon.replace(
     '#', bio.contacts.location.url).replace('%data%', bio.contacts.location.icon)
   );
-
-  // Old version of above code
-  // $topContactsEntry.append(HTMLemailIcon.replace('#', bio.contacts.email.url));
-  // $topContactsEntry.append(HTMLgithubIcon.replace('#', bio.contacts.github.url));
-  // $topContactsEntry.append(HTMLtwitterIcon.replace('#', bio.contacts.twitter.url));
-  // $topContactsEntry.append(HTMLlocationIcon.replace('#', bio.contacts.location.url));
 }
 
 bio.display();
