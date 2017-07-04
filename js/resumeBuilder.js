@@ -149,9 +149,30 @@ var projects = {
       images: [
         'images/screens/trax_screen1.png',
         'images/screens/trax_screen2.png',
-        'images/placeholder_small.png',
       ],
       url: 'https://github.com/StephenHildebrand/trax',
+    },
+    {
+      title: 'SpellChecker using Hash Tables',
+      dates: '2017',
+      description: `Notes manager written in Java for Android. Implements
+      unique interface for seeing all notes from a single overview.`,
+      images: [
+        'images/placeholder_small.png',
+        'images/placeholder_small.png',
+      ],
+      url: 'https://github.com/StephenHildebrand/',
+    },
+    {
+      title: 'Minimum Spanning Trees on Weighted Graphs',
+      dates: '2017',
+      description: `Uses Kruskal's MST algorithm to read a list of edges and analyzes them
+      to print a heap, MST, and an adjacency list.`,
+      images: [
+        'images/placeholder_small.png',
+        'images/placeholder_small.png',
+      ],
+      url: 'https://github.com/StephenHildebrand/',
     },
     {
       title: 'Spellcheck',
@@ -161,22 +182,21 @@ var projects = {
       images: [
         'images/placeholder_small.png',
         'images/placeholder_small.png',
-        'images/placeholder_small.png',
       ],
       url: 'https://github.com/StephenHildebrand/spellcheck',
     },
-    {
-      title: 'Divi Notes',
-      dates: '2017',
-      description: `Notes manager written in Java for Android. Implements
-      unique interface for seeing all notes from a single overview.`,
-      images: [
-        'images/placeholder_small.png',
-        'images/placeholder_small.png',
-        'images/placeholder_small.png',
-      ],
-      url: 'https://github.com/StephenHildebrand/',
-    },
+    // {
+    //   title: 'Divi Notes',
+    //   dates: '2017',
+    //   description: `Notes manager written in Java for Android. Implements
+    //   unique interface for seeing all notes from a single overview.`,
+    //   images: [
+    //     'images/placeholder_small.png',
+    //     'images/placeholder_small.png',
+    //   ],
+    //   url: 'https://github.com/StephenHildebrand/',
+    // },
+
   ],
   display: displayProjects,
 };
