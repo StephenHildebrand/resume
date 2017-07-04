@@ -12,7 +12,7 @@ var HTMLheaderRole = '<span>%data%</span><br>';
 
 /* CONTACTS */
 var HTMLbioStart = '<div class="bio-entry"></div>';
-var HTMLbioPic = '<img src="%data% " alt="profile" class="biopic">';
+var HTMLbioPic = '<img src="%data%" alt="profile" class="biopic">';
 var HTMLwelcomeMsg = '<span class="welcome-message text-primary-color">%data%</span>';
 
 // var HTMLstatus = '<br><span class="status secondary-text-color">Status: %data%</span>';
@@ -55,11 +55,14 @@ var HTMLprojectStart = '<div class="proj-entry"></div>';
 var HTMLprojectTitle = '<a href="#">%data%</a>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p>%data%</p>';
-var HTMLprojectImage = '<img src="%data%">';
 
-/* FOOTER */
+var HTMLprojectImage = '<img src="#" alt="screen-shot" class="project-image">';
+
+/* MAP */
+// var googleMap = '<div id="map"></div>';
+
+// Scroll-to-top button.
 var footerButton = '<button onclick="scrollToTop()" class="fab-main">^</button>';
-var googleMap = '<div id="map"></div>';
 
 // /*
 // Helper code that hooks up your code to the button you'll be
