@@ -311,18 +311,30 @@ Displays the education information.
 function displayEducation() {
   if (education.schools.length > 0) {
     $('#education').append(HTMLschoolStart);
+
+    let $eduEntry = $('.education-entry');
+
+    // Schools
     for (let sch in education.schools) {
-      let formattedName = HTMLschoolName.replace('%data%', education.schools[sch].name);formattedName.replace('#', education.schools[sch].url);
+      let formattedName = HTMLschoolName.replace(
+        '%data%', education.schools[sch].name).replace('#', education.schools[sch].url);
       let formattedDegree = HTMLschoolDegree.replace('%data%', education.schools[sch].degree);
       let formattedDates = HTMLschoolDates.replace('%data%', education.schools[sch].dates);
       let formattedLocation = HTMLschoolLocation.replace('%data%', education.schools[sch].location);
       let formattedMajor = HTMLschoolMajor.replace('%data%', education.schools[sch].major);
-      let $eduEntry = $('.education-entry');
       $eduEntry.append(formattedName + formattedDegree);
       $eduEntry.append(formattedLocation);
       $eduEntry.append(formattedDates);
       $eduEntry.append(formattedMajor);
     }
+
+    // Related Coursework
+    $eduEntry.append(HTMLcoursesStart);
+     for (let crs in education.courses) {
+       let formattedCourse = HTMLcourses.replace(
+         '%data%', education.courses[crs].title).replace('#', education.courses[crs].number);
+       $eduEntry.append(formattedCourse);
+     }
   }
 }
 
