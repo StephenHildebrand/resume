@@ -11,9 +11,9 @@ a.href = 'http://example.com';
 document.body.appendChild(a);
 */
 
-var $headerEntry = $('#header');
+const $headerEntry = $('#header');
 
-var bio = {
+const bio = {
   name: 'Stephen Hildebrand',
   role: 'Software Developer (under-construction)',
   contacts: {
@@ -67,7 +67,7 @@ var bio = {
   display: displayBio,
 };
 
-var education = {
+const education = {
   schools: [
     {
       name: 'North Carolina State University',
@@ -139,7 +139,7 @@ var education = {
   display: displayEducation,
 };
 
-var work = {
+const work = {
   jobs: [
     {
       employer: 'Recreational Equipment Inc.',
@@ -164,7 +164,7 @@ var work = {
   display: displayWork,
 };
 
-var projects = {
+const projects = {
   projects: [
     {
       title: 'Trax',
@@ -236,8 +236,8 @@ var projects = {
  that contains information about the click event.
  */
 $(document).click(function (loc) {
-  var x = loc.pageX;
-  var y = loc.pageY;
+  const x = loc.pageX;
+  const y = loc.pageY;
   logClicks(x, y);
 });
 
@@ -264,7 +264,7 @@ function displayBio() {
   $headerEntry.prepend(HTMLheaderName.replace('%data%', bio.name));
 
   $('#bio').prepend(HTMLbioStart);
-  var $bioEntry = $('.bio-entry');
+  const $bioEntry = $('.bio-entry');
 
   $bioEntry.append(HTMLbioPic.replace('%data%', bio.bioPic));
   $bioEntry.append(HTMLwelcomeMsg.replace('%data%', bio.welcomeMsg));
@@ -280,12 +280,12 @@ function displayBio() {
   */
   if (bio.skills.length > 0) {
     $bioEntry.append(HTMLskillsStart);
-    for (var i = 0; i < bio.skills.length; i++) {
+    for (let i = 0; i < bio.skills.length; i++) {
       $('#skills').append(HTMLskills.replace('%data%', bio.skills[i]));
     }
   }
 
-  var $topContactsEntry = $('#topContacts');
+  const $topContactsEntry = $('#topContacts');
   $topContactsEntry.append(HTMLmobileIcon.replace(
     '#', bio.contacts.mobile.url).replace('%data%', bio.contacts.mobile.icon)
   );
@@ -311,13 +311,13 @@ Displays the education information.
 function displayEducation() {
   if (education.schools.length > 0) {
     $('#education').append(HTMLschoolStart);
-    for (sch in education.schools) {
-      var formattedName = HTMLschoolName.replace('%data%', education.schools[sch].name);formattedName.replace('#', education.schools[sch].url);
-      var formattedDegree = HTMLschoolDegree.replace('%data%', education.schools[sch].degree);
-      var formattedDates = HTMLschoolDates.replace('%data%', education.schools[sch].dates);
-      var formattedLocation = HTMLschoolLocation.replace('%data%', education.schools[sch].location);
-      var formattedMajor = HTMLschoolMajor.replace('%data%', education.schools[sch].major);
-      var $eduEntry = $('.education-entry');
+    for (let sch in education.schools) {
+      let formattedName = HTMLschoolName.replace('%data%', education.schools[sch].name);formattedName.replace('#', education.schools[sch].url);
+      let formattedDegree = HTMLschoolDegree.replace('%data%', education.schools[sch].degree);
+      let formattedDates = HTMLschoolDates.replace('%data%', education.schools[sch].dates);
+      let formattedLocation = HTMLschoolLocation.replace('%data%', education.schools[sch].location);
+      let formattedMajor = HTMLschoolMajor.replace('%data%', education.schools[sch].major);
+      let $eduEntry = $('.education-entry');
       $eduEntry.append(formattedName + formattedDegree);
       $eduEntry.append(formattedLocation);
       $eduEntry.append(formattedDates);
@@ -335,24 +335,24 @@ using HTMLprojectStart from helper.js.
 function displayProjects() {
   // for (var p = 0; p < projects.length; p++) {
   if (projects.projects.length > 0) {
-    for (proj in projects.projects) {
+    for (let proj in projects.projects) {
       $('#projects').append(HTMLprojectStart);
 
-      var formattedTitle = HTMLprojectTitle.replace('%data%', projects.projects[proj].title).replace('#', projects.projects[proj].url);
-      var $projEntry = $('.proj-entry:last');
+      let formattedTitle = HTMLprojectTitle.replace('%data%', projects.projects[proj].title).replace('#', projects.projects[proj].url);
+      const $projEntry = $('.proj-entry:last');
 
       $projEntry.append(formattedTitle);
 
-      var formattedDates = HTMLprojectDates.replace('%data%', projects.projects[proj].dates);
+      let formattedDates = HTMLprojectDates.replace('%data%', projects.projects[proj].dates);
       $projEntry.append(formattedDates);
 
-      var formattedDescription = HTMLprojectDescription.replace('%data%', projects.projects[proj].description);
+      let formattedDescription = HTMLprojectDescription.replace('%data%', projects.projects[proj].description);
       $projEntry.append(formattedDescription);
 
       // Check for 1 or more images.
       if (projects.projects[proj].images.length > 0) {
-        for (img in projects.projects[proj].images) {
-          var $formattedImage = HTMLprojectImage.replace('#', projects.projects[proj].images[img]);
+        for (let img in projects.projects[proj].images) {
+          let $formattedImage = HTMLprojectImage.replace('#', projects.projects[proj].images[img]);
           $($projEntry).append($formattedImage);
         }
       }
@@ -369,16 +369,16 @@ projects.display();
 // element with class work-entry last.
 function displayWork() {
   if (work.jobs.length > 0) {
-    for (j in work.jobs) {
+    for (let j in work.jobs) {
       $('#workExperience').append(HTMLworkStart);
-      var $formattedEmployer = HTMLworkEmployer.replace('%data%', work.jobs[j].employer).replace(
+      let $formattedEmployer = HTMLworkEmployer.replace('%data%', work.jobs[j].employer).replace(
         '#', work.jobs[j].url);
-      var $formattedTitle = HTMLworkTitle.replace('%data%', work.jobs[j].title);
-      var $formattedDates = HTMLworkDates.replace('%data%', work.jobs[j].dates);
-      var $formattedDesc = HTMLworkDescription.replace('%data%', work.jobs[j].description);
-      var $formattedLocation = HTMLworkLocation.replace('%data%', work.jobs[j].location);
+      let $formattedTitle = HTMLworkTitle.replace('%data%', work.jobs[j].title);
+      let $formattedDates = HTMLworkDates.replace('%data%', work.jobs[j].dates);
+      let $formattedDesc = HTMLworkDescription.replace('%data%', work.jobs[j].description);
+      let $formattedLocation = HTMLworkLocation.replace('%data%', work.jobs[j].location);
 
-      var $workEntry = $('.work-entry:last');
+      let $workEntry = $('.work-entry:last');
       $workEntry.append($formattedEmployer + ' ' + $formattedTitle);
       $workEntry.append($formattedLocation);
       $workEntry.append($formattedDates);
@@ -392,7 +392,7 @@ work.display();
 
 // $('#mapDiv').append(googleMap);
 
-var $footContactsEntry = $('#footContacts');
+const $footContactsEntry = $('#footContacts');
 $footContactsEntry.append(
   HTMLmobileIcon.replace('#', bio.contacts.mobile.url).replace('%data%', bio.contacts.mobile.icon)
 );
