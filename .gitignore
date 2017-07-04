@@ -150,3 +150,4 @@ pip-log.txt
 images/sample-site.png
 *.xml
 .well-known/
+.idea/workspace.xml
