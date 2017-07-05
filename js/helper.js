@@ -23,7 +23,8 @@ let HTMLgithubIcon = '<a href="#"><img alt="github" src="%data%" width="48" heig
 let HTMLlocationIcon = '<a href="#"><img alt="location" src="%data%" width="48" height="48"></a>';
 
 /* SKILLS */
-let HTMLskillsStart = `<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills" class="flex-column"></ul>`;
+let HTMLskillsStart = `<h3 id="skills-h3">Skills at a Glance:</h3>
+<ul id="skills" class="flex-column"></ul>`;
 let HTMLskills = '<li class="flex-item"><span class="text-primary-color">%data%</span></li>';
 
 /* EDUCATION */
@@ -35,8 +36,10 @@ let HTMLschoolMajor = '<div class="major-text">%data%</div>';
 let HTMLschoolDates = '<div class="date-text secondary-text-color">%data%</div>';
 
 /* COURSES */
-const HTMLcoursesStart = `<hr><h4 id="courses-h4">Related Courses</h4><ul id="courses" class="flex-column"></ul>`;
-let HTMLcourses  = '<li class="flex-item indent"><span class="primary-text-color">%data% (#)</span></li>';
+const HTMLcoursesStart = `<hr><h4 id="courses-h4">Related Courses</h4>
+<ul id="courses" class="flex-column"></ul>`;
+let HTMLcourses  = `<li class="flex-item indent">
+<span class="primary-text-color">%data% (#)</span></li>`;
 
 /* WORK */
 let HTMLworkStart = '<div class="work-entry"></div>';
@@ -55,7 +58,7 @@ let HTMLprojectDescription = '<p>%data%</p>';
 let HTMLprojectImage = '<img src="#" alt="screen-shot" class="project-image">';
 
 /* MAP */
-// let googleMap = '<div id="map"></div>';
+let googleMap = '<div id="map"></div>';
 
 // Scroll-to-top button.
 let footerButton = '<button onclick="scrollToTop()" class="fab-main">^</button>';
@@ -87,19 +90,19 @@ Locations. Nothing is currently done with this information other
 than logging to the console.
 */
 let clickLocations = [];    // initialize array of clickLocations
-function logClicks(x,y) {
+function logClicks(x, y) {
   clickLocations.push(
     {
       x: x,
-      y: y
+      y: y,
     }
   );
   console.log('x location: ' + x + '; y location: ' + y);
 }
-$(document).click(function(loc) {
+
+$(document).click(function (loc) {
   // TODO: Future code to use click info will go here.
 });
-
 
 /*******************************************************************************
  *                      CUSTOM GOOGLE MAP GENERATION
@@ -130,7 +133,7 @@ function initializeMap() {
   let locations;  // variable for the
 
   let mapOptions = {
-    disableDefaultUI: true
+    disableDefaultUI: true,
   };
 
   /*
@@ -155,14 +158,14 @@ function initializeMap() {
     // the locations array. Note that forEach is used for array iteration
     // as described in the Udacity FEND Style Guide:
     // https://udacity.github.io/frontend-nanodegree-styleguide/javascript.html#for-in-loop
-    education.schools.forEach(function(school){
+    education.schools.forEach(function (school) {
       locations.push(school.location);
     });
 
     // iterates through work locations and appends each location to
     // the locations array. Note that forEach is used for array iteration
     // as described in the Udacity FEND Style Guide above.
-    work.jobs.forEach(function(job){
+    work.jobs.forEach(function (job) {
       locations.push(job.location);
     });
 
@@ -188,7 +191,7 @@ function initializeMap() {
     let marker = new google.maps.Marker({
       map: map,
       position: placeData.geometry.location,
-      title: name
+      title: name,
     });
 
     // infoWindows are the little helper windows that open when you click
@@ -201,14 +204,14 @@ function initializeMap() {
       just the name of the city. Try learning some HTML and CSS to make the
       overlay really stand out!
       */
-      content: name
+      content: name,
     });
 
     // Your goal is to add an overlay with the name of each city that will
     // appear when a user clicks on your map.
     // Can you figure out the right function to call within the event listener to
     // ensure that the infoWindow object opens when a user clicks on a location?
-    google.maps.event.addListener(marker, 'click', function() {
+    google.maps.event.addListener(marker, 'click', function () {
       // your code goes here!
       // To Open an Info Window:
       // When you create an info window, it is not displayed automatically on
@@ -221,8 +224,10 @@ function initializeMap() {
     // this is where the pin actually gets added to the map.
     // bounds.extend() takes in a map location object
     bounds.extend(new google.maps.LatLng(lat, lon));
+
     // fit the map to the new marker
     map.fitBounds(bounds);
+
     // center the map
     map.setCenter(bounds.getCenter());
   }
@@ -248,10 +253,10 @@ function initializeMap() {
     let service = new google.maps.places.PlacesService(map);
 
     // Iterates through the array of locations, creates a search object for each location
-      locations.forEach(function(place){
+    locations.forEach(function (place) {
       // the search request object
       let request = {
-        query: place
+        query: place,
       };
 
       // Actually searches the Google Maps API for location data and runs the callback
@@ -282,6 +287,6 @@ Uncomment the code below when you're ready to implement a Google Map!
 // Vanilla JS way to listen for resizing of the window
 // and adjust map bounds
 //window.addEventListener('resize', function(e) {
-  //Make sure the map bounds get updated on page resize
+//Make sure the map bounds get updated on page resize
 //  map.fitBounds(mapBounds);
 //});
