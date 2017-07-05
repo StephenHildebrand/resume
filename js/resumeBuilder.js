@@ -48,10 +48,11 @@ const bio = {
     'C/C++, Assembly (1 year)',
     'JavaScript/HTML/CSS (<1 year)',
     'Android, XML, Spring (<6 months)',
-    'Eclipse, IntelliJ IDEs, Visual Studio, Android Studio',
     'Git, GitHub, VCS',
+    'Eclipse, IntelliJ IDEA/WebStorm, Visual Studio, Android Studio and more',
     'Windows, UNIX/Linux, Android',
-    'Linux server builder/maintainer (personal)',
+    'Linux home server built/maintained for web hosting, Nextcloud, media server and more.',
+    'Excellent communication and interpersonal skills',
     'Effective worker in both independent and team settings',
     'Fluent in English/Spanish',
   ],
@@ -159,7 +160,7 @@ const work = {
 const projects = {
   projects: [
     {
-      title: 'Trax',
+      title: 'Rental Manger/Tracker -- Java',
       dates: '2017',
       description: `Tracking application for a database of things written in Java. Allows use
       client accounts to create a thing request queue to be filled according to thing availability
@@ -171,7 +172,7 @@ const projects = {
       url: 'https://github.com/StephenHildebrand/trax',
     },
     {
-      title: 'SpellChecker using Hash Tables',
+      title: 'Hash Table based Spelling Checker -- Java',
       dates: '2017',
       description: `Notes manager written in Java for Android. Implements
       unique interface for seeing all notes from a single overview.`,
@@ -182,7 +183,7 @@ const projects = {
       url: 'https://github.com/StephenHildebrand/',
     },
     {
-      title: 'Minimum Spanning Trees on Weighted Graphs',
+      title: 'Minimum Spanning Trees on Weighted Graphs -- Java',
       dates: '2017',
       description: `Uses Kruskal's MST algorithm to read a list of edges and analyzes them
       to print a heap, MST, and an adjacency list.`,
@@ -193,7 +194,7 @@ const projects = {
       url: 'https://github.com/StephenHildebrand/',
     },
     {
-      title: 'Spellcheck',
+      title: 'Spell Check -- C',
       dates: '2016',
       description: `Interactive command-line application written in C. Allows user to check spelling
       of a text file using default or custom word dictionary.`,
