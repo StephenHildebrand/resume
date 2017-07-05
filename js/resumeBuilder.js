@@ -1,14 +1,6 @@
 /*
 resumeBuilder.js contains code that builds the resume
 dynamically when the  website, index.html, is opened.
-
-Example Link Creation:
-var a = document.createElement('a');
-var linkText = document.createTextNode('my title text');
-a.appendChild(linkText);
-a.title = 'my title text';
-a.href = 'http://example.com';
-document.body.appendChild(a);
 */
 
 const $headerEntry = $('#header');
@@ -49,7 +41,7 @@ const bio = {
     },
   },
   status: 'Seeking position as an entry-level software developer.',
-  welcomeMsg: `Bright, driven student with a diverse academic background, a focus on
+  welcomeMsg: `Entry-level software engineer with a diverse academic background, a focus on
   programming, a love for learning and a passion for software development.`,
   skills: [
     'Java (2 years)',
@@ -211,18 +203,6 @@ const projects = {
       ],
       url: 'https://github.com/StephenHildebrand/spellcheck',
     },
-    // {
-    //   title: 'Divi Notes',
-    //   dates: '2017',
-    //   description: `Notes manager written in Java for Android. Implements
-    //   unique interface for seeing all notes from a single overview.`,
-    //   images: [
-    //     'images/placeholder_small.png',
-    //     'images/placeholder_small.png',
-    //   ],
-    //   url: 'https://github.com/StephenHildebrand/',
-    // },
-
   ],
   display: displayProjects,
 };
@@ -330,11 +310,11 @@ function displayEducation() {
 
     // Related Coursework
     $eduEntry.append(HTMLcoursesStart);
-     for (let crs in education.courses) {
-       let formattedCourse = HTMLcourses.replace(
-         '%data%', education.courses[crs].title).replace('#', education.courses[crs].number);
-       $eduEntry.append(formattedCourse);
-     }
+    for (let crs in education.courses) {
+      let formattedCourse = HTMLcourses.replace(
+       '%data%', education.courses[crs].title).replace('#', education.courses[crs].number);
+      $eduEntry.append(formattedCourse);
+    }
   }
 }
 
@@ -350,7 +330,8 @@ function displayProjects() {
     for (let proj in projects.projects) {
       $('#projects').append(HTMLprojectStart);
 
-      let formattedTitle = HTMLprojectTitle.replace('%data%', projects.projects[proj].title).replace('#', projects.projects[proj].url);
+      let formattedTitle = HTMLprojectTitle.replace(
+        '%data%', projects.projects[proj].title).replace('#', projects.projects[proj].url);
       const $projEntry = $('.proj-entry:last');
 
       $projEntry.append(formattedTitle);
@@ -358,7 +339,8 @@ function displayProjects() {
       let formattedDates = HTMLprojectDates.replace('%data%', projects.projects[proj].dates);
       $projEntry.append(formattedDates);
 
-      let formattedDescription = HTMLprojectDescription.replace('%data%', projects.projects[proj].description);
+      let formattedDescription = HTMLprojectDescription.replace(
+        '%data%', projects.projects[proj].description);
       $projEntry.append(formattedDescription);
 
       // Check for 1 or more images.
@@ -415,11 +397,11 @@ $footContactsEntry.append(
 $footContactsEntry.append(
   HTMLgithubIcon.replace('#', bio.contacts.github.url).replace('%data%', bio.contacts.github.icon)
 );
-$footContactsEntry.append(
-  HTMLtwitterIcon.replace('#', bio.contacts.twitter.url).replace('%data%', bio.contacts.twitter.icon)
+$footContactsEntry.append(HTMLtwitterIcon.replace(
+  '#', bio.contacts.twitter.url).replace('%data%', bio.contacts.twitter.icon)
 );
-$footContactsEntry.append(
-  HTMLlocationIcon.replace('#', bio.contacts.location.url).replace('%data%', bio.contacts.location.icon)
+$footContactsEntry.append(HTMLlocationIcon.replace(
+  '#', bio.contacts.location.url).replace('%data%', bio.contacts.location.icon)
 );
 
 $('#lets-connect').append(footerButton);
