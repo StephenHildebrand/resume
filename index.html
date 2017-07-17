@@ -18,8 +18,8 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   <title>Stephen Hildebrand</title>
   <!-- Load the page styles. -->
   <link href="css/style.css" rel="stylesheet" type="text/css">
-   <!--Load Roboto font. -->
-   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <!--Load Roboto font. -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
   <!--
   Uncomment the <script> tag below when you're ready to add an interactive
@@ -53,7 +53,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     <h2>Work Experience</h2>
   </div>
   <!--<div id="mapDiv" class='secondary-text-color'>-->
-      <!--<h2>Where I've Lived and Worked</h2>-->
+  <!--<h2>Where I've Lived and Worked</h2>-->
   <!--</div>-->
   <div id="lets-connect" class='block-title light-primary-color'>
     <h3 class="default-primary-color center-text">Let's Connect</h3>
@@ -112,35 +112,35 @@ then appear because the if statement in index.html will no longer be true.
 -->
 <script>
 
-if (document.getElementsByClassName('flex-item').length === 0) {
-  document.getElementById('topContacts').style.backgroundColor = 'none';
-}
+  if (document.getElementsByClassName('flex-item').length === 0) {
+    document.getElementById('topContacts').style.backgroundColor = 'none';
+  }
 
-// The if statements below prevent anything from displaying within the
-// #header element when there is no h1 element in the document.
-if (document.getElementsByTagName('h1').length === 0) {
-  document.getElementById('header').style.backgroundColor = 'none';
-}
+  // The if statements below prevent anything from displaying within the
+  // #header element when there is no h1 element in the document.
+  if (document.getElementsByTagName('h1').length === 0) {
+    document.getElementById('header').style.backgroundColor = 'none';
+  }
 
-if (document.getElementsByClassName('work-entry').length === 0) {
-  document.getElementById('workExperience').style.backgroundColor = 'black';
-}
+  if (document.getElementsByClassName('work-entry').length === 0) {
+    document.getElementById('workExperience').style.backgroundColor = 'black';
+  }
 
-if (document.getElementsByClassName('proj-entry').length === 0) {
-  document.getElementById('projects').style.backgroundColor = 'black';
-}
+  if (document.getElementsByClassName('proj-entry').length === 0) {
+    document.getElementById('projects').style.backgroundColor = 'black';
+  }
 
-if (document.getElementsByClassName('education-entry').length === 0) {
-  document.getElementById('education').style.backgroundColor = 'black';
-}
+  if (document.getElementsByClassName('education-entry').length === 0) {
+    document.getElementById('education').style.backgroundColor = 'black';
+  }
 
-if (document.getElementsByClassName('flex-item').length === 0) {
-  document.getElementById('lets-connect').style.backgroundColor = 'black';
-}
+  if (document.getElementsByClassName('flex-item').length === 0) {
+    document.getElementById('lets-connect').style.backgroundColor = 'black';
+  }
 
-//  if (document.getElementById('map') === null) {
-//    document.getElementById('mapDiv').style.backgroundColor = 'black';
-//  }
+  //  if (document.getElementById('map') === null) {
+  //    document.getElementById('mapDiv').style.backgroundColor = 'black';
+  //  }
 
 </script>
 </body>

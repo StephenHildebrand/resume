@@ -48,7 +48,7 @@ const bio = {
     'C/C++, Assembly (1 year)',
     'JavaScript/HTML/CSS (<1 year)',
     'Android, XML, Spring (<6 months)',
-    'Git, GitHub, VCS',
+    'Git, GitHub, VCS, JUnit',
     'Eclipse, IntelliJ IDEA/WebStorm, Visual Studio, Android Studio and more',
     'Windows, UNIX/Linux, Android',
     'Linux home server built/maintained for web hosting, Nextcloud, media server and more.',
@@ -162,9 +162,9 @@ const projects = {
     {
       title: 'Rental Manger/Tracker -- Java',
       dates: '2017',
-      description: `Tracking application for a database of things written in Java. Allows use
-      client accounts to create a thing request queue to be filled according to thing availability
-      and thing queue priority.`,
+      description: `Tracking application for a database of objects written in Java. Allows the
+      user to create an object request queue to be filled according to its availability and queue
+      priority.`,
       images: [
         'images/screens/trax_screen1.png',
         'images/screens/trax_screen2.png',
@@ -174,25 +174,36 @@ const projects = {
     {
       title: 'Hash Table based Spelling Checker -- Java',
       dates: '2017',
-      description: `Notes manager written in Java for Android. Implements
-      unique interface for seeing all notes from a single overview.`,
+      description: `Checks spelling of English words. Builds, then uses a hash table word
+      dictionary to scan text for spelling errors.`,
       images: [
         'images/placeholder_small.png',
         'images/placeholder_small.png',
       ],
-      url: 'https://github.com/StephenHildebrand/',
+      url: 'https://github.com/StephenHildebrand/SpellChecker',
     },
     {
-      title: 'Minimum Spanning Trees on Weighted Graphs -- Java',
+      title: 'Text Compressor/Decompressor -- Java',
       dates: '2017',
-      description: `Uses Kruskal's MST algorithm to read a list of edges and analyzes them
-      to print a heap, MST, and an adjacency list.`,
+      description: `Handles both the compression and decompression of a text document via the
+      Move-to-Front heuristic.`,
       images: [
         'images/placeholder_small.png',
         'images/placeholder_small.png',
       ],
-      url: 'https://github.com/StephenHildebrand/',
+      url: 'https://github.com/StephenHildebrand/Archiver',
     },
+    // {
+    //   title: 'Notes/To-do Manager -- Android',
+    //   dates: '2017',
+    //   description: `Notes manager written in Java for Android. Implements unique interface for
+    //   seeing all notes from a single overview.`,
+    //   images: [
+    //     'images/placeholder_small.png',
+    //     'images/placeholder_small.png',
+    //   ],
+    //   url: 'https://github.com/StephenHildebrand/Divi',
+    // },
     {
       title: 'Spell Check -- C',
       dates: '2016',
