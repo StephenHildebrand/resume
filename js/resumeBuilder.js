@@ -7,7 +7,7 @@ const $headerEntry = $('#header');
 
 const bio = {
   name: 'Stephen Hildebrand',
-  role: '(under construction)',
+  role: 'Software Developer',
   contacts: {
     mobile: {
       text: '(919) 891-0611',
@@ -49,9 +49,9 @@ const bio = {
     'JavaScript/HTML/CSS (<1 year)',
     'Android, XML, Spring (<6 months)',
     'Git, GitHub, VCS, JUnit',
-    'Eclipse, IntelliJ IDEA/WebStorm, Visual Studio, Android Studio and more',
+    'Eclipse, IntelliJ IDEA/WebStorm, Visual Studio, Android Studio',
     'Windows, UNIX/Linux, Android',
-    'Linux home server built/maintained for web hosting, Nextcloud, media server and more.',
+    'Linux home server built/maintained for web hosting, Nextcloud, etc',
     'Excellent communication and interpersonal skills',
     'Effective worker in both independent and team settings',
     'Fluent in English/Spanish',
@@ -74,7 +74,7 @@ const education = {
       name: 'Southern College of Optometry',
       location: 'Memphis, TN',
       degree: 'Doctor of Optometry (incomplete)',
-      major: 'Optometry',
+      major: 'Optometry ',
       dates: '2013-2015',
       url: 'https://www.sco.edu',
     },
@@ -325,7 +325,7 @@ function displayEducation() {
     for (let crs in education.courses) {
       let formattedCourse = HTMLcourses.replace(
        '%data%', education.courses[crs].title).replace('#', education.courses[crs].number);
-      $eduEntry.append(formattedCourse);
+      $('#courses').append(formattedCourse);
     }
   }
 }
