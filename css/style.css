@@ -25,7 +25,7 @@ h6 {
 }
 
 .bio-entry {
-  padding: 16px;
+  padding-right: 8px;
 }
 
 h1 {
@@ -36,15 +36,14 @@ h1 {
 }
 
 h2 {
-  font-size: 30px;
-  line-height: 32px;
+  font-size: 28px;
+  line-height: 30px;
   padding: 16px 16px 0;
 }
 
 h3 {
   font-size: 24px;
   line-height: 28px;
-  color: #000;
 }
 
 h4 {
@@ -69,11 +68,10 @@ hr {
   display: block;
 }
 
-.dark-primary-color    { background: #00701a; }
-.default-primary-color { background: #43a047; }
-.light-primary-color   { background: #76d275; }
-.text-primary-color    { color: #ffffff; }
-.primary-text-color    { color: #212121; }
+.default-primary-color { background: #2196f3; }
+.dark-primary-color    { background: #0069c0 ; }
+.light-primary-color   { background: #6ec6ff; }
+.light-text-color      { color: #ffffff; }
 .background-color      { background: #e1e2e1}
 
 .major-text {
@@ -130,7 +128,7 @@ a {
 }
 
 #header {
-  padding: 18px;
+  padding: 12px;
 }
 
 .flex-box {
@@ -180,8 +178,8 @@ ul {
 
 .biopic {
   float: left;
-  padding: 12px;
-  width: 220px;
+  /*padding: 12px;*/
+  width: 390px;
   display: none;
 }
 
@@ -195,7 +193,7 @@ img {
 }
 
 span {
-  padding: 2px;
+  padding: 12px;
 }
 
 #lets-connect {
@@ -216,7 +214,7 @@ span {
 
 @media only screen and (max-width:900px) {
   .biopic {
-    width: 175px;
+    width: 225px;
   }
   .project-image {
     width: 210px;
