@@ -13,9 +13,9 @@ let HTMLheaderRole = '<span>%data%</span>';
 /* CONTACTS */
 let HTMLbioStart = '<div class="bio-entry"></div>';
 let HTMLbioPic = '<img src="%data%" alt="profile" class="biopic">';
-let HTMLwelcomeMsg = '<span class="welcome-message text-primary-color">%data%</span>';
+let HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
 
-// let HTMLstatus = '<br><span class="status secondary-text-color">Status: %data%</span>';
+// let HTMLstatus = '<br><span class="status">Status: %data%</span>';
 let HTMLmobileIcon = '<a href="#"><img alt="mobile" src="%data%" width="48" height="48"></a>';
 let HTMLemailIcon = '<a href="#"><img alt="email" src="%data%" width="48" height="48"></a>';
 let HTMLtwitterIcon = '<a href="#"><img alt="twitter" src="%data%" width="48" height="48"></a>';
@@ -25,28 +25,28 @@ let HTMLlocationIcon = '<a href="#"><img alt="location" src="%data%" width="48" 
 /* SKILLS */
 let HTMLskillsStart = `<h3 id="skills-h3">Skills at a Glance:</h3>
 <ul id="skills" class="flex-column"></ul>`;
-let HTMLskills = '<li class="flex-item"><span class="text-primary-color">%data%</span></li>';
+let HTMLskills = '<li class="flex-item"><span class="light-text-color">%data%</span></li>';
 
 /* EDUCATION */
 let HTMLschoolStart = '<div class="education-entry"></div>';
 let HTMLschoolName = '<hr><a href="#">%data%';
-let HTMLschoolLocation = '<div class="location-text secondary-text-color">%data%</div>';
+let HTMLschoolLocation = '<div class="location-text">%data%</div>';
 let HTMLschoolDegree = ' -- %data%</a>';
 let HTMLschoolMajor = '<div class="major-text">%data%</div>';
-let HTMLschoolDates = '<div class="date-text secondary-text-color">%data%</div>';
+let HTMLschoolDates = '<div class="date-text">%data%</div>';
 
 /* COURSES */
 const HTMLcoursesStart = `<hr><h4 id="courses-h4">Related Courses</h4>
 <ul id="courses" class="flex-column"></ul>`;
 let HTMLcourses  = `<li class="flex-item indent">
-<span class="primary-text-color">%data% (#)</span></li>`;
+<span class="default-text-color">%data% (#)</span></li>`;
 
 /* WORK */
 let HTMLworkStart = '<div class="work-entry"></div>';
 let HTMLworkEmployer = '<hr><a href="#">%data%';
 let HTMLworkTitle = ' - %data%</a>';
 let HTMLworkDates = '<div class="date-text">%data%</div>';
-let HTMLworkLocation = '<div class="location-text secondary-text-color">%data%</div>';
+let HTMLworkLocation = '<div class="location-text">%data%</div>';
 let HTMLworkDescription = '<p>%data%</p>';
 
 /* PROJECTS */
