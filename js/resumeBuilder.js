@@ -12,32 +12,32 @@ const bio = {
     mobile: {
       text: '(919) 891-0611',
       url: 'tel:+19198910611',
-      icon: 'images/icons/mobile.png',
+      icon: 'images/icons/mobile_light.png',
     },
     email: {
       text: 'sfhildeb@gmail.com',
       url: 'mailto:sfhildeb@gmail.com',
-      icon: 'images/icons/email.png',
+      icon: 'images/icons/email_light.png',
     },
     twitter: {
       text: '@stephenhildy',
       url: 'https://twitter.com/stephenhildy',
-      icon: 'images/icons/twitter.png',
+      icon: 'images/icons/twitter_light.png',
     },
     github: {
       text: 'StephenHildebrand',
       url: 'https://github.com/StephenHildebrand',
-      icon: 'images/icons/github.png',
+      icon: 'images/icons/github_light.png',
     },
     linkedin: {
       text: 'stephen-hildebrand',
       url: 'https://www.linkedin.com/in/stephen-hildebrand/',
-      icon: 'images/icons/linkedin.png',
+      icon: 'images/icons/linkedin_light.png',
     },
     location: {
       text: 'Durham, NC',
       url: 'https://goo.gl/maps/1raYiUz6vGC2',
-      icon: 'images/icons/location.png',
+      icon: 'images/icons/location_light.png',
     },
   },
   status: 'Seeking position as an entry-level software developer.',
