@@ -7,7 +7,7 @@ const $headerEntry = $('#header');
 
 const bio = {
   name: 'Stephen Hildebrand',
-  role: 'Software Developer',
+  role: '(under construction)',
   contacts: {
     mobile: {
       text: '(919) 891-0611',
@@ -41,8 +41,8 @@ const bio = {
     },
   },
   status: 'Seeking position as an entry-level software developer.',
-  welcomeMsg: `Entry-level software engineer with a diverse academic background, a focus on
-  programming, a love for learning and a passion for software development.`,
+  welcomeMsg: `Entry-level software engineer with a diverse academic background, a passion for
+  software development and a love for all things tech.`,
   skills: [
     'Java (2 years)',
     'C/C++, Assembly (1 year)',
