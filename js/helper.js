@@ -8,7 +8,7 @@ These are HTML strings. JavaScript functions are used
 to replace the %data% placeholder text you see in each.*/
 /* HEADER */
 let HTMLheaderName = '<h1 id="name">%data%</h1>';
-let HTMLheaderRole = '<span>%data%</span>';
+let HTMLheaderRole = '<span class="role">%data%</span>';
 
 /* CONTACTS */
 let HTMLbioStart = '<div class="bio-entry"></div>';
@@ -23,9 +23,8 @@ let HTMLgithubIcon = '<a href="#"><img alt="github" src="%data%" width="48" heig
 let HTMLlocationIcon = '<a href="#"><img alt="location" src="%data%" width="48" height="48"></a>';
 
 /* SKILLS */
-let HTMLskillsStart = `<h3 id="skills-h3">Skills at a Glance:</h3>
-<ul id="skills" class="flex-column"></ul>`;
-let HTMLskills = '<li class="flex-item"><span class="light-text-color">%data%</span></li>';
+let HTMLskillsStart = `<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills" class="flex-column"></ul>`;
+let HTMLskills = '<li class="flex-item"><span class="light-text-color">- %data%</span></li>';
 
 /* EDUCATION */
 let HTMLschoolStart = '<div class="education-entry"></div>';
@@ -36,10 +35,8 @@ let HTMLschoolMajor = '<div class="major-text">%data%</div>';
 let HTMLschoolDates = '<div class="date-text">%data%</div>';
 
 /* COURSES */
-const HTMLcoursesStart = `<hr><h4 id="courses-h4">Related Courses</h4>
-<ul id="courses" class="flex-column"></ul>`;
-let HTMLcourses  = `<li class="flex-item indent">
-<span class="default-text-color">%data% (#)</span></li>`;
+const HTMLcoursesStart = `<hr><h4 id="courses-h4">Related Courses:</h4><ul id="courses" class="flex-column"></ul>`;
+let HTMLcourses  = `<li class="flex-item indent"><span class="default-text-color">- %data%</span></li>`;
 
 /* WORK */
 let HTMLworkStart = '<div class="work-entry"></div>';
