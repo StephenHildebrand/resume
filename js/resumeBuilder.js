@@ -68,7 +68,7 @@ const education = {
       degree: 'Certificate',
       major: 'Computer Programming',
       dates: '2015-2016',
-      url: 'https://www.ncsu.edu',
+      url: 'https://engineeringonline.ncsu.edu/PS/CPC.html',
     },
     {
       name: 'Southern College of Optometry',
