@@ -40,9 +40,9 @@ const bio = {
       icon: 'images/icons/location_light.png',
     },
   },
-  status: 'Seeking position as an entry-level software developer.',
-  welcomeMsg: `Entry-level software engineer with a diverse academic background, a passion for
-  software development and a love for all things tech.`,
+  status: 'Seeking position as a junior software developer.',
+  welcomeMsg: `Junior software developer with a background in life sciences, a passion for
+  coding and a love for all things tech.`,
   skills: [
     'Java (2 years)',
     'C/C++, Assembly (1 year)',
