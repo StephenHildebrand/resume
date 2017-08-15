@@ -189,12 +189,12 @@ ul {
   float: left;
   padding-left: 24px;
   padding-right: 24px;
-  width: 320px;
+  width: 300px;
   display: none;
 }
 
 .project-image {
-  width: 320px;
+  width: 200px;
   display: none;
 }
 
@@ -213,24 +213,24 @@ span {
 
 /* Media queries to handle various device widths */
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1200px) {
   #lets-connect {
     margin-top: 5%;
   }
   .biopic {
-    width: 280px;
+    width: 240px;
   }
   .project-image {
-    width: 300px;
+    width: 160px;
   }
 }
 
 @media only screen and (max-width:900px) {
   .biopic {
-    width: 220px;
+    width: 200px;
   }
   .project-image {
-    width: 210px;
+    width: 120px;
   }
 }
 
@@ -239,10 +239,10 @@ span {
     margin-top: 10%;
   }
   .biopic {
-    width: 150px;
+    width: 100px;
   }
   .project-image {
-    width: 150px;
+    width: 100px;
   }
   .welcome-message {
     display: none;
