@@ -44,10 +44,10 @@ const bio = {
   welcomeMsg: `Junior software developer with a background in life sciences, a passion for
   coding and a love for all things tech.`,
   skills: [
-    'Java (2 years)',
-    'C/C++, Assembly (1 year)',
-    'JavaScript/HTML/CSS (<1 year)',
-    'Android, XML, Spring (<6 months)',
+    'Java (2yr.)',
+    'C/C++, Assembly (1yr.)',
+    'JavaScript/HTML/CSS (6mo.)',
+    'Android, XML, SQLite, Spring (6mo.)',
     'Git, GitHub, VCS, JUnit',
     'Eclipse, IntelliJ IDEA/WebStorm, Visual Studio, Android Studio',
     'Windows, UNIX/Linux, Android',
