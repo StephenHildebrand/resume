@@ -141,15 +141,12 @@ const work = {
       dates: 'May 2011 - Jul 2013',
       url: 'https://www.rei.com/about-rei.html',
       description: `Resolved customer issues. Assisted with product selection, purchase, 
-      repair and return.
-      
-      Oral/Written Communication: Dealt directly with customer. Maintained department
+      repair and return.`,
+      skills: `Oral/Written Communication: Dealt directly with customer. Maintained department
       communication logs for tracking customer requests/issues until resolution (often
       across multiple weeks/months).
-      
       Customer Specification: Assisted customer with selection of ideal product according
       to needs both via product sales and issue resolution.
-      
       Troubleshooting: Worked with customer to determine cause of troublesome products to
       ensure high customer satisfaction.`,
     },
@@ -159,11 +156,9 @@ const work = {
       location: 'Cary, NC',
       dates: 'Apr 2008 - Aug 2009',
       url: 'https://www.facebook.com/La-Pizza-Volante-243291155598/',
-      description: `Directed daily business operations and resupply. Oversaw food
-      preparation, business advertising and employee hiring.
-      
-      Leadership: Directed employees throughout daily business operation.
-
+      description: `Directed daily business operations and resupply. Oversaw food \
+      preparation, business advertising and employee hiring.`,
+      skills: `Leadership: Directed employees throughout daily business operation.
       Time Management: Balanced multiple responsibilities, such as staff supervision,
       supply management and food preparation/sale.`,
     },
