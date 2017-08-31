@@ -141,7 +141,7 @@ const work = {
       dates: 'May 2011 - Jul 2013',
       url: 'https://www.rei.com/about-rei.html',
       description: `Resolved customer issues. Assisted with product selection, purchase, 
-      repair and return.`,
+      return and repair.`,
       skills: `Oral/Written Communication: Dealt directly with customer. Maintained department
       communication logs for tracking customer requests/issues until resolution (often
       across multiple weeks/months).
