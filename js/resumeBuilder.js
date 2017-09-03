@@ -183,8 +183,8 @@ const projects = {
     {
       title: 'Hash Table based Spelling Checker -- Java',
       dates: '2017',
-      description: `Checks spelling of English words. Builds, then uses a hash table word
-      dictionary to scan text for spelling errors.`,
+      description: `Checks spelling of English words via CLI. Builds, then uses a hash table word
+      dictionary to scan text for spelling errors. GUI alternative to be implemented at later date.`,
       images: [
         'images/placeholder_small.png',
         'images/placeholder_small.png',
@@ -194,25 +194,25 @@ const projects = {
     {
       title: 'Text Compressor/Decompressor -- Java',
       dates: '2017',
-      description: `Handles both the compression and decompression of a text document via the
-      Move-to-Front heuristic.`,
+      description: `Handles both the compression and decompression of a text document using the
+      Move-to-Front heuristic via CLI.`,
       images: [
         'images/placeholder_small.png',
         'images/placeholder_small.png',
       ],
       url: 'https://github.com/StephenHildebrand/Archiver',
     },
-    // {
-    //   title: 'Notes/To-do Manager -- Android',
-    //   dates: '2017',
-    //   description: `Notes manager written in Java for Android. Implements unique interface for
-    //   seeing all notes from a single overview.`,
-    //   images: [
-    //     'images/placeholder_small.png',
-    //     'images/placeholder_small.png',
-    //   ],
-    //   url: 'https://github.com/StephenHildebrand/Divi',
-    // },
+    {
+      title: 'Notes Manager -- Android',
+      dates: 'under development',
+      description: `Note-taking manager written in Java for Android. Implements novel
+      overview interface for seeing all notes from a single overview.`,
+      images: [
+        'images/placeholder_small.png',
+        'images/placeholder_small.png',
+      ],
+      url: 'https://divi.shiild.net',
+    },
     {
       title: 'Spell Check -- C',
       dates: '2016',
