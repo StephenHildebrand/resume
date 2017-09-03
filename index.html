@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <!--
 The main HTML document. Contains links to all of the CSS and JS resources
@@ -17,7 +17,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   <!-- Tells the browser what the title of this page should be. -->
   <title>Stephen Hildebrand</title>
   <!-- Load the page styles. -->
-  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <link href="css/main.css" rel="stylesheet" type="text/css">
   <!--Load Roboto font. -->
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
@@ -31,7 +31,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   <!-- <script src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBv4Vg5fJdTmuH_WU44f6HxG2tOFXSc_Ds"></script> -->
   <!--<script src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAh9E1FcbRpq1ldQt0LLB2A2t11w4Ht8OY"></script>-->
 
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 <div id="main" class="background-color">
@@ -93,55 +93,45 @@ you can't accomplish with vanilla (regular) JavaScript.-->
 <script src="js/helper.js"></script>
 
 <!--
-The next line tells the browser where to download the JavaScript file you'll be
-writing. In resumeBuilder.js, you'll be writing code that builds the resume
-dynamically when this website, index.html, is opened.
+Tells the browser where to download the JavaScript file that is written. the
+resumeBuilder.js file contains code that builds the resume dynamically when
+index.html is opened.
 -->
 <script src="js/resumeBuilder.js"></script>
 
 <!--
-These scripts are written in JavaScript. You'll be breaking them down as part of
-a quiz. Essentially, the next few lines are checking to see if you have not
-changed each section of the resume. If you have not made any changes to a section
-of the resume, then that part of the resume does not show up. More on this in the
-course.
-
-If the %data% substring in the HTMLheaderName variable is replaced with the
-bio.name property and the result is appended to the #header element, skills can
-then appear because the if statement in index.html will no longer be true.
+The next few lines are checking to see if each section of the resume is working.
+If not working, then that part of the resume does not show up.
 -->
 <script>
-
   if (document.getElementsByClassName('flex-item').length === 0) {
     document.getElementById('topContacts').style.backgroundColor = 'none';
   }
-
   // The if statements below prevent anything from displaying within the
   // #header element when there is no h1 element in the document.
   if (document.getElementsByTagName('h1').length === 0) {
     document.getElementById('header').style.backgroundColor = 'none';
   }
-
   if (document.getElementsByClassName('work-entry').length === 0) {
     document.getElementById('workExperience').style.backgroundColor = 'black';
   }
-
   if (document.getElementsByClassName('proj-entry').length === 0) {
     document.getElementById('projects').style.backgroundColor = 'black';
   }
-
   if (document.getElementsByClassName('education-entry').length === 0) {
     document.getElementById('education').style.backgroundColor = 'black';
   }
-
   if (document.getElementsByClassName('flex-item').length === 0) {
     document.getElementById('lets-connect').style.backgroundColor = 'black';
   }
-
-  //  if (document.getElementById('map') === null) {
-  //    document.getElementById('mapDiv').style.backgroundColor = 'black';
-  //  }
-
 </script>
+
+ <!--Google Analytics: change UA-XXXXX-Y to be your site's ID.-->
+<script>
+  window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+  ga('create','UA-105836284-2','auto');ga('send','pageview')
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
 </body>
 </html>
